@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="assets/img/icon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexivo || Terms Page</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+</head>
+<body class="bg-mainBanner">
+    <!-- Header Area Start Here -->
+    <header class="pt-7">
+        <div class="xl:w-[1280px] w-auto mx-auto xl:px-0 px-[18px]">
+            <nav class="p-2 bg-white rounded-full relative z-30">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <a href="index.html">
+                            <img class="w-[127px]" src="assets/img/logo.svg" alt="">
+                        </a>
+                    </div>
+                    <div class=" lg:block hidden">
+                        <ul class="flex items-center gap-10">
+                            <li class="group relative w-max">
+                                <a href="index.html" class="text-base font-InterTight font-normal leading-6 text-secondaryColor transition ease-in-out duration-500 hover:text-primaryColor hover:transition hover:ease-in-out hover:duration-500">Home</a>
+                                <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[2px] bg-primaryColor group-hover:w-full"></span>
+                            
+                            </li>
+                            <li class="group relative w-max">
+                                <a href="about.html" class="text-base font-InterTight font-normal leading-6 text-secondaryColor transition ease-in-out duration-500 hover:text-primaryColor hover:transition hover:ease-in-out hover:duration-500">About Us</a>
+                                <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[2px] bg-primaryColor group-hover:w-full"></span>
+                            </li>
+                            <li class="group relative w-max">
+                                <a href="service.html" class="text-base font-InterTight font-normal leading-6 text-secondaryColor transition ease-in-out duration-500 hover:text-primaryColor hover:transition hover:ease-in-out hover:duration-500">Services</a>
+                                <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[2px] bg-primaryColor group-hover:w-full"></span>
+                            </li>
+                            <li class="group relative w-max">
+                                <a href="works.html" class="text-base font-InterTight font-normal leading-6 text-secondaryColor transition ease-in-out duration-500 hover:text-primaryColor hover:transition hover:ease-in-out hover:duration-500">Works</a>
+                                <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[2px] bg-primaryColor group-hover:w-full"></span>
+                            </li>
+                            <li class="py-1.5 group flex items-center relative" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
+                                <a href="#" onclick="event.preventDefault()" class="inline-flex items-center text-base font-InterTight font-normal text-secondaryColor hover:text-primaryColor transition ease-in-out duration-500"
+                                    @click.prevent="open = !open" :class="{ 'text-LavenderIndigo': open }">
+                                    Pages
+                                    <svg :class="{ 'rotate-180': open }" class="ml-2 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" width="11" height="6" fill="none" viewBox="0 0 11 6">
+                                        <path d="M1.5 1L5.5 5L9.5 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+
+                                <!-- Dropdown content  -->
+                                <ul id="dropdown" class="absolute left-0 top-8 w-48 py-2 list-none bg-white rounded-md hidden z-10 group-hover:block border border-borderColor" :class="{ 'block': open, 'hidden': !open }">
+                                    <!-- Dropdown items -->
+                                    <li>
+                                        <a href="services-details.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Service Details Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="work-details.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Works details Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="blog.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Blog Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="blog-details.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Blog details Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="faq.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">FAQ</a>
+                                    </li>
+                                    <li>
+                                        <a href="pricing.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Pricing</a>
+                                    </li>
+                                    <li>
+                                        <a href="404.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">404 Page</a>
+                                    </li>
+                                </ul>
+                            </li>   
+                        </ul>
+                    </div>
+
+                    <!-- Menu button for mobile -->
+                    <div class="flex items-center lg:hidden sm:block">
+                        <button id="mobileMenuButton" class="focus:outline-none bg-primaryColor w-11 h-11 rounded-full flex justify-center items-center">
+                            <svg id="menuIcon" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="white">
+                                <path id="menuOpenIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                                <path id="menuCloseIcon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="lg:block hidden">
+                        <a href="contact.html" class="font-InterTight font-medium text-base leading-6 text-white bg-primaryColor py-2.5 px-5 rounded-full border border-primaryColor hover:border-borderColor hover:bg-transparent hover:text-primaryColor transition ease-in-out duration-500 hover:transition hover:ease-in-out hover:duration-500">Contact Us</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div id="mobileMenu" class="border border-borderColor bg-white shadow-btn hidden rounded-R_5 my-2 py-7 transition-height transition-all duration-1000 ease-in-out overflow-hidden absolute inset-x-0 top-[65px] z-50">
+                    <div class="">
+                        <ul class="dropdown flex flex-col gap-y-5 px-5">
+                            <li class="group relative w-max">
+                                <a href="index.html" class="text-lg font-InterTight font-normal leading-8 text-secondaryColor transition ease-in-out duration-500 hover:text-primaryColor hover:transition hover:ease-in-out hover:duration-500">Home</a>
+                                <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[2px] bg-primaryColor group-hover:w-full"></span>
+                            
+                            </li>
+                            <li class="group relative w-max">
+                                <a href="about.html" class="text-lg font-InterTight font-normal leading-8 text-secondaryColor transition ease-in-out duration-500 hover:text-primaryColor hover:transition hover:ease-in-out hover:duration-500">About Us</a>
+                                <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[2px] bg-primaryColor group-hover:w-full"></span>
+                            </li>
+                            <li class="group relative w-max">
+                                <a href="service.html" class="text-lg font-InterTight font-normal leading-8 text-secondaryColor transition ease-in-out duration-500 hover:text-primaryColor hover:transition hover:ease-in-out hover:duration-500">Services</a>
+                                <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[2px] bg-primaryColor group-hover:w-full"></span>
+                            </li>
+                            <li class="group relative w-max">
+                                <a href="works.html" class="text-lg font-InterTight font-normal leading-8 text-secondaryColor transition ease-in-out duration-500 hover:text-primaryColor hover:transition hover:ease-in-out hover:duration-500">works</a>
+                                <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[2px] bg-primaryColor group-hover:w-full"></span>
+                            </li>
+                            <li class=" group relative">
+                                <!-- Icon added here for the mobile menu -->
+                                <a href="javascript:void(0);" id="mobileFeaturesToggle" class=" pb-5 flex justify-between text-lg font-InterTight font-normal leading-8 text-primaryColor items-center">
+                                    Pages
+                                    <svg id="mobileDropdownIcon" class="ml-2 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" width="11" height="6" fill="none" viewBox="0 0 11 6">
+                                        <path d="M1.5 1L5.5 5L9.5 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                                <ul id="mobileDropdownMenu" class="hidden bg-bg mb-5 rounded-md shadow-2xl bg-white">
+                                    <!-- Dropdown items -->
+                                    <li>
+                                        <a href="services-details.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Service Details Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="work-details.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Works details Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="blog.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Blog Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="blog-details.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Blog details Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="faq.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">FAQ</a>
+                                    </li>
+                                    <li>
+                                        <a href="pricing.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Pricing</a>
+                                    </li>
+                                    <li>
+                                        <a href="404.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">404 Page</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="lg:hidden block text-center mt-5">
+                        <a href="contact.html" class="font-InterTight font-medium text-base leading-6 text-white bg-primaryColor py-2.5 px-5 rounded-full border border-primaryColor hover:border-borderColor hover:bg-transparent hover:text-primaryColor transition ease-in-out duration-500 hover:transition hover:ease-in-out hover:duration-500">Contact Us</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Header Area End Here -->
+
+    <!-- Terms Area Start Here -->
+    <section class="md:mt-20 mt-10">
+        <div class="xl:w-[1280px] w-auto mx-auto xl:px-0 px-[18px]">
+            <div
+                data-aos="fade-down"
+                data-aos-duration="1000"
+                data-aos-offset="20"
+                data-aos-once="true"
+            class="lg:w-844 w-full mx-auto">
+                <h4 class="text-center font-InterTight font-normal md:text-60xl text-40xl leading-[48px] md:leading-64 text-primaryColor">Terms & Conditions</h4>
+                <div class="md:mt-12 mt-7">
+                    <p class="font-InterTight font-normal text-base leading-7 text-secondaryColor">Effective Date: [Insert Date]
+                        <br/>
+                        <br/>
+                     to [Your Agency Name]! These Terms & Conditions ("Terms") govern your access to and use of our website, products, and services. By using our website or engaging our services, you agree to these Terms in full.</p>
+                </div>
+
+                <div class="md:mt-12 mt-5">
+                    <h4 class="font-InterTight font-normal md:text-28xl text-24xl leading-32 md:leading-34 text-primaryColor">1. Services Offered</h4>
+                    <p class="pt-5 font-InterTight font-normal text-base leading-7 text-secondaryColor">We offer:</p>                                                                                                                                                 
+                    <ul class="mt-2 ml-4 list-disc">                             
+                        <li class="font-InterTight font-normal text-base leading-6 text-primaryColor">Custom Services – <span class="text-secondaryColor">including but not limited to branding, website design, development, digital marketing, and content creation</span></li>
+                        <li class="pt-1 font-InterTight font-normal text-base leading-6 text-primaryColor">Subscription Services – <span class="text-secondaryColor"> including but not limited to branding, website design, development, digital marketing, and content creation</span></li>
+                    </ul>
+                </div>
+
+                <div class="md:mt-12 mt-5">
+                    <h4 class="font-InterTight font-normal md:text-28xl text-24xl leading-32 md:leading-34 text-primaryColor">2. User Eligibility</h4>
+                    <p class="pt-5 font-InterTight font-normal text-base leading-7 text-secondaryColor">You must be at least 18 years old or the legal age of majority in your jurisdiction to use our services.</p>
+                </div>
+
+                <div class="md:mt-12 mt-5">
+                    <h4 class="font-InterTight font-normal md:text-28xl text-24xl leading-32 md:leading-34 text-primaryColor">3. Account Registration</h4>
+                    <p class="pt-5 font-InterTight font-normal text-base leading-7 text-secondaryColor">Some services may require account registration. You agree to provide accurate, complete, and updated information. You are responsible for maintaining the confidentiality of your account.</p>
+                </div>
+
+                <div class="md:mt-12 mt-5">
+                    <h4 class="font-InterTight font-normal md:text-28xl text-24xl leading-32 md:leading-34 text-primaryColor">4. Payments & Subscriptions</h4>
+                    <ul class="mt-5 ml-7 list-disc">                             
+                        <li class="font-InterTight font-normal text-base leading-6 text-primaryColor">Custom Services – <span class="text-secondaryColor">including but not limited to branding, website design, development, digital marketing, and content creation</span></li>
+                        <li class="pt-1 font-InterTight font-normal text-base leading-6 text-primaryColor">Subscription Services – <span class="text-secondaryColor"> including but not limited to branding, website design, development, digital marketing, and content creation</span></li>
+                    </ul>
+                </div>
+
+                <div class="md:mt-12 mt-5">
+                    <h4 class="font-InterTight font-normal md:text-28xl text-24xl leading-32 md:leading-34 text-primaryColor">5. Intellectual Property</h4>
+                    <p class="pt-5 font-InterTight font-normal text-base leading-7 text-secondaryColor">All original content, graphics, code, and designs created by [Your Agency Name] remain our intellectual property until full payment is received. Upon full payment, the client will receive rights as agreed upon in the project contract.</p>
+                </div>
+
+                <div class="md:mt-12 mt-5">
+                    <h4 class="font-InterTight font-normal md:text-28xl text-24xl leading-32 md:leading-34 text-primaryColor">6. Client Responsibilities</h4>
+                    <p class="pt-5 font-InterTight font-normal text-base leading-7 text-secondaryColor">You agree to provide timely feedback, required materials, and access necessary for us to complete our work. Delays due to client inaction may result in timeline adjustments.</p>
+                </div>
+
+                <div class="md:mt-12 mt-5">
+                    <h4 class="font-InterTight font-normal md:text-28xl text-24xl leading-32 md:leading-34 text-primaryColor">7. Termination</h4>
+                    <p class="pt-5 font-InterTight font-normal text-base leading-7 text-secondaryColor">We reserve the right to terminate your access or subscription if you violate these Terms. Clients may also terminate custom projects with written notice; fees for completed work up to that point will be due.</p>
+                </div>
+
+                <div class="md:mt-12 mt-5">
+                    <h4 class="font-InterTight font-normal md:text-28xl text-24xl leading-32 md:leading-34 text-primaryColor">8. Limitation of Liability</h4>
+                    <p class="pt-5 font-InterTight font-normal text-base leading-7 text-secondaryColor">To the fullest extent permitted by law, [Your Agency Name] shall not be liable for any indirect, incidental, or consequential damages resulting from your use of our services.</p>
+                </div>
+
+                <div class="md:mt-12 mt-5">
+                    <h4 class="font-InterTight font-normal md:text-28xl text-24xl leading-32 md:leading-34 text-primaryColor">9. Amendments</h4>
+                    <p class="pt-5 font-InterTight font-normal text-base leading-7 text-secondaryColor">We may update these Terms from time to time. Continued use of our services after changes means you accept the revised terms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Terms Area End Here -->
+
+    <!-- Footer Area Start Here -->
+    <section class="lg:mt-[150px] md:mt-20 mt-10 bg-black">
+        <div class="xl:w-[1280px] w-auto mx-auto xl:px-0 px-[18px]">
+            <div
+                data-aos="fade-down"
+                data-aos-duration="1000"
+                data-aos-offset="20"
+                data-aos-once="true"
+            class="md:py-20 py-10">
+                <div class="flex lg:flex-row flex-col justify-between items-start xl:gap-y-0 gap-y-10">
+                    <div class="lg:w-[288px] w-full ">
+                        <span class="font-InterTight font-normal text-sm leading-6 text-white text-opacity-70">Let's start a conversation</span>
+                        <a href="#" class="font-InterTight font-normal text-xl leading-8 text-[#EDECE4] pt-3 block">hi.nexivo@gmail.com</a>
+                        <a href="#" class="font-InterTight font-normal text-xl leading-8 text-[#EDECE4] pt-3 block">+1 (123) 456 7890</a>
+                    </div>
+
+                    <div class="lg:w-[912px] w-full grid xl:grid-cols-4 md:grid-cols-3 grid-cols-1 xl:gap-y-0 gap-y-10">
+                        <div>
+                            <span class="font-InterTight font-normal text-sm leading-6 text-white text-opacity-70">Useful Link</span>
+                            <ul>
+                                <li class="group relative w-max">
+                                    <a href="index.html" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-3 block">Home</a>
+                                    <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[1px] bg-white group-hover:w-full"></span>
+                                </li>
+                                <li class="group relative w-max">
+                                    <a href="about.html" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-4 block">About Us</a>
+                                    <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[1px] bg-white group-hover:w-full"></span>
+                                </li>
+                                <li class="group relative w-max">
+                                    <a href="service.html" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-4 block">Services</a>
+                                    <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[1px] bg-white group-hover:w-full"></span>
+                                </li>
+                                <li class="group relative w-max">
+                                    <a href="works.html" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-4 block">Works</a>
+                                    <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[1px] bg-white group-hover:w-full"></span>
+                                </li>
+                                <li class="group relative w-max">
+                                    <a href="contact.html" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-4 block">Contact Us</a>
+                                    <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[1px] bg-white group-hover:w-full"></span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="">
+                            <span class="font-InterTight font-normal text-sm leading-6 text-white text-opacity-70">Based on</span>
+                            <ul>
+                                <li class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-3 block">New York, USA</li>
+                                <li class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-3">Dubai, UAE</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <span class="font-InterTight font-normal text-sm leading-6 text-white text-opacity-70">Follow us</span>
+                            <ul>
+                                <li><a href="#" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-3 block">LinkedIn</a></li>
+                                <li><a href="#" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-3 block">Twitter</a></li>
+                                <li><a href="#" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-3 block">Behance</a></li>
+                                <li><a href="#" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-3 block">Dribbble</a></li>
+                            </ul>
+                        </div>
+
+                       <div class="">
+                            <span class="font-InterTight font-normal text-sm leading-6 text-white text-opacity-70">Based on</span>
+                            <ul>
+                                <li class="group relative w-max">
+                                    <a href="terms.html" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-3 block">Terms & Conditions</a>
+                                    <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[1px] bg-white group-hover:w-full"></span>
+                                </li>
+                                <li class="group relative w-max">
+                                    <a href="policy.html" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-4 block">Privacy Policy</a>
+                                    <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[1px] bg-white group-hover:w-full"></span>
+                                </li>
+                            </ul>
+                       </div>
+                    </div>
+                </div>
+                <hr class="border border-white border-opacity-30 my-8"/>
+
+                <div class="flex md:flex-row flex-col justify-between items-start xl:gap-0 gap-2">
+                    <p class="font-InterTight font-normal text-base leading-7 text-white text-opacity-70">&copy; 2025 Company All rights reserved.</p>
+                    <a href="#" class="font-InterTight font-normal text-base leading-7 text-white text-opacity-70">Design @Figma</a>
+                </div>
+            </div>
+             <img
+                data-aos="zoom-in"
+                data-aos-duration="1000"
+                data-aos-offset="20"
+                data-aos-once="true"
+             class="w-full" src="assets/img/footer-logo.svg" alt="">
+        </div>
+       
+    </section>
+    <!-- Footer Area End Here -->
+
+    <script src="assets/js/alpine.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/aos_script.js"></script>
+</body>
+</html>

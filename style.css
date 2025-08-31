@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* CountUp */
+
+@property --num-users {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+  }
+  
+  @property --num-reg-users {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+  }
+
+  @property --num-percent {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+  }
+
+   @property --num-percents {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+  }
+  
+  @keyframes counter {
+    from {
+        --num-users: 0;
+        --num-reg-users: 0;
+        --num-percent:0;
+        --num-percents:0;
+    }
+    to {
+        --num-users: 200;
+        --num-reg-users: 95;
+        --num-percent:15;
+        --num-percents:10;
+    }
+  }
+

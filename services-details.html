@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="assets/img/icon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexivo || Services Details Page</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+</head>
+<body class="bg-mainBanner">
+
+    <!-- Header Area Start Here -->
+    <header class="pt-7">
+        <div class="xl:w-[1280px] w-auto mx-auto xl:px-0 px-[18px]">
+            <nav class="p-2 bg-white rounded-full relative z-30">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <a href="index.html">
+                            <img class="w-[127px]" src="assets/img/logo.svg" alt="">
+                        </a>
+                    </div>
+                    <div class=" lg:block hidden">
+                        <ul class="flex items-center gap-10">
+                            <li class="group relative w-max">
+                                <a href="index.html" class="text-base font-InterTight font-normal leading-6 text-secondaryColor transition ease-in-out duration-500 hover:text-primaryColor hover:transition hover:ease-in-out hover:duration-500">Home</a>
+                                <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[2px] bg-primaryColor group-hover:w-full"></span>
+                            
+                            </li>
+                            <li class="group relative w-max">
+                                <a href="about.html" class="text-base font-InterTight font-normal leading-6 text-secondaryColor transition ease-in-out duration-500 hover:text-primaryColor hover:transition hover:ease-in-out hover:duration-500">About Us</a>
+                                <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[2px] bg-primaryColor group-hover:w-full"></span>
+                            </li>
+                            <li class="group relative w-max">
+                                <a href="service.html" class="text-base font-InterTight font-normal leading-6 text-secondaryColor transition ease-in-out duration-500 hover:text-primaryColor hover:transition hover:ease-in-out hover:duration-500">Services</a>
+                                <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[2px] bg-primaryColor group-hover:w-full"></span>
+                            </li>
+                            <li class="group relative w-max">
+                                <a href="works.html" class="text-base font-InterTight font-normal leading-6 text-secondaryColor transition ease-in-out duration-500 hover:text-primaryColor hover:transition hover:ease-in-out hover:duration-500">Works</a>
+                                <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[2px] bg-primaryColor group-hover:w-full"></span>
+                            </li>
+                            <li class="py-1.5 group flex items-center relative" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
+                                <a href="#" onclick="event.preventDefault()" class="inline-flex items-center text-base font-InterTight font-normal text-secondaryColor hover:text-primaryColor transition ease-in-out duration-500"
+                                    @click.prevent="open = !open" :class="{ 'text-LavenderIndigo': open }">
+                                    Pages
+                                    <svg :class="{ 'rotate-180': open }" class="ml-2 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" width="11" height="6" fill="none" viewBox="0 0 11 6">
+                                        <path d="M1.5 1L5.5 5L9.5 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+
+                                <!-- Dropdown content  -->
+                                <ul id="dropdown" class="absolute left-0 top-8 w-48 py-2 list-none bg-white rounded-md hidden z-10 group-hover:block border border-borderColor" :class="{ 'block': open, 'hidden': !open }">
+                                    <!-- Dropdown items -->
+                                    <li>
+                                        <a href="services-details.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Service Details Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="work-details.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Works details Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="blog.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Blog Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="blog-details.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Blog details Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="faq.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">FAQ</a>
+                                    </li>
+                                    <li>
+                                        <a href="pricing.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Pricing</a>
+                                    </li>
+                                    <li>
+                                        <a href="404.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">404 Page</a>
+                                    </li>
+                                </ul>
+                            </li>   
+                        </ul>
+                    </div>
+
+                    <!-- Menu button for mobile -->
+                    <div class="flex items-center lg:hidden sm:block">
+                        <button id="mobileMenuButton" class="focus:outline-none bg-primaryColor w-11 h-11 rounded-full flex justify-center items-center">
+                            <svg id="menuIcon" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="white">
+                                <path id="menuOpenIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                                <path id="menuCloseIcon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="lg:block hidden">
+                        <a href="contact.html" class="font-InterTight font-medium text-base leading-6 text-white bg-primaryColor py-2.5 px-5 rounded-full border border-primaryColor hover:border-borderColor hover:bg-transparent hover:text-primaryColor transition ease-in-out duration-500 hover:transition hover:ease-in-out hover:duration-500">Contact Us</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div id="mobileMenu" class="border border-borderColor bg-white shadow-btn hidden rounded-R_5 my-2 py-7 transition-height transition-all duration-1000 ease-in-out overflow-hidden absolute inset-x-0 top-[65px] z-50">
+                    <div class="">
+                        <ul class="dropdown flex flex-col gap-y-5 px-5">
+                            <li class="group relative w-max">
+                                <a href="index.html" class="text-lg font-InterTight font-normal leading-8 text-secondaryColor transition ease-in-out duration-500 hover:text-primaryColor hover:transition hover:ease-in-out hover:duration-500">Home</a>
+                                <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[2px] bg-primaryColor group-hover:w-full"></span>
+                            
+                            </li>
+                            <li class="group relative w-max">
+                                <a href="about.html" class="text-lg font-InterTight font-normal leading-8 text-secondaryColor transition ease-in-out duration-500 hover:text-primaryColor hover:transition hover:ease-in-out hover:duration-500">About Us</a>
+                                <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[2px] bg-primaryColor group-hover:w-full"></span>
+                            </li>
+                            <li class="group relative w-max">
+                                <a href="service.html" class="text-lg font-InterTight font-normal leading-8 text-secondaryColor transition ease-in-out duration-500 hover:text-primaryColor hover:transition hover:ease-in-out hover:duration-500">Services</a>
+                                <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[2px] bg-primaryColor group-hover:w-full"></span>
+                            </li>
+                            <li class="group relative w-max">
+                                <a href="works.html" class="text-lg font-InterTight font-normal leading-8 text-secondaryColor transition ease-in-out duration-500 hover:text-primaryColor hover:transition hover:ease-in-out hover:duration-500">works</a>
+                                <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[2px] bg-primaryColor group-hover:w-full"></span>
+                            </li>
+                            <li class=" group relative">
+                                <!-- Icon added here for the mobile menu -->
+                                <a href="javascript:void(0);" id="mobileFeaturesToggle" class=" pb-5 flex justify-between text-lg font-InterTight font-normal leading-8 text-primaryColor items-center">
+                                    Pages
+                                    <svg id="mobileDropdownIcon" class="ml-2 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" width="11" height="6" fill="none" viewBox="0 0 11 6">
+                                        <path d="M1.5 1L5.5 5L9.5 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                                <ul id="mobileDropdownMenu" class="hidden bg-bg mb-5 rounded-md shadow-2xl bg-white">
+                                    <!-- Dropdown items -->
+                                    <li>
+                                        <a href="services-details.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Service Details Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="work-details.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Works details Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="blog.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Blog Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="blog-details.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Blog details Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="faq.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">FAQ</a>
+                                    </li>
+                                    <li>
+                                        <a href="pricing.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Pricing</a>
+                                    </li>
+                                    <li>
+                                        <a href="404.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">404 Page</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="lg:hidden block text-center mt-5">
+                        <a href="contact.html" class="font-InterTight font-medium text-base leading-6 text-white bg-primaryColor py-2.5 px-5 rounded-full border border-primaryColor hover:border-borderColor hover:bg-transparent hover:text-primaryColor transition ease-in-out duration-500 hover:transition hover:ease-in-out hover:duration-500">Contact Us</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Header Area End Here -->
+
+    <!-- Banner Area Start Here -->
+    <section class="md:mt-[100px] mt-10">
+        <div
+            data-aos="fade-down"
+                data-aos-duration="1000"
+                data-aos-offset="20"
+                data-aos-once="true"
+        class="xl:w-[1280px] w-auto mx-auto xl:px-0 px-[18px]">
+            <h4 class="font-InterTight font-normal md:text-72xl text-40xl leading-44 md:leading-[72px] text-primaryColor">Brand & Identity Design</h4>
+
+            <div class="flex xl:flex-row flex-col justify-between gap-7 items-start lg:mt-[60px] mt-10">
+                <div class="xl:w-844 w-full">
+                    <img
+                        data-aos="zoom-in"
+                        data-aos-duration="1000"
+                        data-aos-offset="20"
+                        data-aos-once="true"
+                    class="w-full" src="assets/img/services-banner.png" alt="">
+
+                    <div class="xl:w-[792px] w-full">
+                        <div class="md:mt-12 mt-5">
+                            <h4 class="font-InterTight font-normal md:text-28xl text-24xl leading-32 md:leading-34 text-primaryColor">Introduction</h4>
+                            <p class="font-InterTight font-normal text-base leading-6 text-secondaryColor pt-5">Your brand is more than just a logo—it's the story, voice, and visual identity that shape how your audience perceives you. At [Your Agency Name], we build powerful brand identities that resonate, inspire, and endure.</p>
+                        </div>
+
+                        <div class="md:mt-12 mt-5">
+                            <h4 class="font-InterTight font-normal md:text-28xl text-24xl leading-32 md:leading-34 text-primaryColor">What’s Included in This Service</h4>
+                            <div class="mt-5">
+                                <h4 class="flex items-center gap-3 font-InterTight font-normal md:text-24xl text-xl leading-8 md:leading-34 text-primaryColor">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.5206 12.0006C20.5206 7.16214 16.5987 3.24023 11.7603 3.24023C6.9219 3.24023 3 7.16214 3 12.0006C3 16.839 6.9219 20.7609 11.7603 20.7609C16.5987 20.7609 20.5206 16.839 20.5206 12.0006Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M21.0009 5.40234C16.218 8.07985 13.2505 12.4065 11.8408 15.0548C10.8746 13.433 9.64972 11.9911 8.16016 10.7331" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    Brand Discovery & Strategy
+                                </h4>
+                                <p class="pl-8 font-InterTight font-normal text-base leading-6 text-secondaryColor pt-3">We begin with a deep dive into your business, values, target audience, and goals to define your unique brand positioning by exploring so much.</p>
+                            </div>
+
+                            <div class="mt-5">
+                                <h4 class="flex items-center gap-3 font-InterTight font-normal md:text-24xl text-xl leading-8 md:leading-34 text-primaryColor">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.5206 12.0006C20.5206 7.16214 16.5987 3.24023 11.7603 3.24023C6.9219 3.24023 3 7.16214 3 12.0006C3 16.839 6.9219 20.7609 11.7603 20.7609C16.5987 20.7609 20.5206 16.839 20.5206 12.0006Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M21.0009 5.40234C16.218 8.07985 13.2505 12.4065 11.8408 15.0548C10.8746 13.433 9.64972 11.9911 8.16016 10.7331" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    Logo Design & Visual Marks
+                                </h4>
+                                <p class="pl-8 font-InterTight font-normal text-base leading-6 text-secondaryColor pt-3">We begin with a deep dive into your business, values, target audience, and goals to define your unique brand positioning by exploring so much.</p>
+                            </div>
+
+                            <div class="mt-5">
+                                <h4 class="flex items-center gap-3 font-InterTight font-normal md:text-24xl text-xl leading-8 md:leading-34 text-primaryColor">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.5206 12.0006C20.5206 7.16214 16.5987 3.24023 11.7603 3.24023C6.9219 3.24023 3 7.16214 3 12.0006C3 16.839 6.9219 20.7609 11.7603 20.7609C16.5987 20.7609 20.5206 16.839 20.5206 12.0006Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M21.0009 5.40234C16.218 8.07985 13.2505 12.4065 11.8408 15.0548C10.8746 13.433 9.64972 11.9911 8.16016 10.7331" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    Typography & Color Palette
+                                </h4>
+                                <p class="pl-8 font-InterTight font-normal text-base leading-6 text-secondaryColor pt-3">We begin with a deep dive into your business, values, target audience, and goals to define your unique brand positioning by exploring so much.</p>
+                            </div>
+
+                            <div class="mt-5">
+                                <h4 class="flex items-center gap-3 font-InterTight font-normal md:text-24xl text-xl leading-8 md:leading-34 text-primaryColor">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.5206 12.0006C20.5206 7.16214 16.5987 3.24023 11.7603 3.24023C6.9219 3.24023 3 7.16214 3 12.0006C3 16.839 6.9219 20.7609 11.7603 20.7609C16.5987 20.7609 20.5206 16.839 20.5206 12.0006Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M21.0009 5.40234C16.218 8.07985 13.2505 12.4065 11.8408 15.0548C10.8746 13.433 9.64972 11.9911 8.16016 10.7331" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    Brand Guidelines
+                                </h4>
+                                <p class="pl-8 font-InterTight font-normal text-base leading-6 text-secondaryColor pt-3">We begin with a deep dive into your business, values, target audience, and goals to define your unique brand positioning by exploring so much.</p>
+                            </div>
+
+                            <div class="mt-5">
+                                <h4 class="flex items-center gap-3 font-InterTight font-normal md:text-24xl text-xl leading-8 md:leading-34 text-primaryColor">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.5206 12.0006C20.5206 7.16214 16.5987 3.24023 11.7603 3.24023C6.9219 3.24023 3 7.16214 3 12.0006C3 16.839 6.9219 20.7609 11.7603 20.7609C16.5987 20.7609 20.5206 16.839 20.5206 12.0006Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M21.0009 5.40234C16.218 8.07985 13.2505 12.4065 11.8408 15.0548C10.8746 13.433 9.64972 11.9911 8.16016 10.7331" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    Stationery & Collateral Design
+                                </h4>
+                                <p class="pl-8 font-InterTight font-normal text-base leading-6 text-secondaryColor pt-3">We begin with a deep dive into your business, values, target audience, and goals to define your unique brand positioning by exploring so much.</p>
+                            </div>
+                        </div>
+
+                        <div class="md:mt-12 mt-5">
+                            <h4 class="font-InterTight font-normal md:text-28xl text-24xl leading-32 md:leading-34 text-primaryColor">Why Brand Identity Matters</h4>
+                            <p class="font-InterTight font-normal text-base leading-6 text-secondaryColor pt-5">A strong brand identity builds trust, sets you apart from competitors, and creates emotional connections. Whether you're launching a startup or rebranding an established business, we ensure your brand speaks clearly and confidently to the right audience.</p>
+                        </div>
+
+                        <div class="md:mt-12 mt-5">
+                            <h4 class="font-InterTight font-normal md:text-28xl text-24xl leading-32 md:leading-34 text-primaryColor">Our Process</h4>
+                            <div class="pt-5 grid md:grid-cols-6 grid-cols-1 gap-3.5">
+                                <div class="bg-transparent border border-borderColor p-5 rounded-xl col-span-2">
+                                    <span class="font-InterTight font-normal text-base leading-6 text-primaryColor">1</span>
+                                    <h4 class="pt-5 font-InterTight font-normal text-base leading-6 text-primaryColor">Figma</h4>
+                                    <p class="pt-1 font-InterTight font-normal text-base leading-6 text-secondaryColor">UI Design & Prototyping</p>
+                                </div>
+
+                                <div class="bg-transparent border border-borderColor p-5 rounded-xl col-span-2">
+                                    <span class="font-InterTight font-normal text-base leading-6 text-primaryColor">2</span>
+                                    <h4 class="pt-5 font-InterTight font-normal text-base leading-6 text-primaryColor">Notion</h4>
+                                    <p class="pt-1 font-InterTight font-normal text-base leading-6 text-secondaryColor">Documentation & Planning</p>
+                                </div>
+
+                                <div class="bg-transparent border border-borderColor p-5 rounded-xl col-span-2">
+                                    <span class="font-InterTight font-normal text-base leading-6 text-primaryColor">3</span>
+                                    <h4 class="pt-5 font-InterTight font-normal text-base leading-6 text-primaryColor">Illustrator</h4>
+                                    <p class="pt-1 font-InterTight font-normal text-base leading-6 text-secondaryColor">Icon Design</p>
+                                </div>
+
+                                <div class="bg-transparent border border-borderColor p-5 rounded-xl col-span-3">
+                                    <span class="font-InterTight font-normal text-base leading-6 text-primaryColor">2</span>
+                                    <h4 class="pt-5 font-InterTight font-normal text-base leading-6 text-primaryColor">Notion</h4>
+                                    <p class="pt-1 font-InterTight font-normal text-base leading-6 text-secondaryColor">Documentation & Planning</p>
+                                </div>
+
+                                <div class="bg-transparent border border-borderColor p-5 rounded-xl col-span-3">
+                                    <span class="font-InterTight font-normal text-base leading-6 text-primaryColor">3</span>
+                                    <h4 class="pt-5 font-InterTight font-normal text-base leading-6 text-primaryColor">Illustrator</h4>
+                                    <p class="pt-1 font-InterTight font-normal text-base leading-6 text-secondaryColor">Icon Design</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="md:mt-12 mt-5">
+                            <h4 class="font-InterTight font-normal md:text-28xl text-24xl leading-32 md:leading-34 text-primaryColor">What You’ll Get</h4>
+                            <ul class="mt-5 ml-4 list-disc">
+                                <li class="font-InterTight font-normal text-base leading-6 text-secondaryColor">High-resolution logo files (AI, PNG, SVG, JPG)</li>
+                                <li class="pt-5 font-InterTight font-normal text-base leading-6 text-secondaryColor">Brand color codes (HEX, RGB, CMYK)</li>
+                                <li class="pt-5 font-InterTight font-normal text-base leading-6 text-secondaryColor">Typography recommendations</li>
+                                <li class="pt-5 font-InterTight font-normal text-base leading-6 text-secondaryColor">Full brand guideline PDF</li>
+                                <li class="pt-5 font-InterTight font-normal text-base leading-6 text-secondaryColor">Stationery mockups and editable templates</li>
+                            </ul>
+                        </div>
+
+                        <div class="md:mt-12 mt-5">
+                            <h4 class="font-InterTight font-normal md:text-28xl text-24xl leading-32 md:leading-34 text-primaryColor">What We Delivered</h4>
+                            <ul class="grid md:grid-cols-2 grid-cols-1 gap-x-6 gap-y-5 mt-5">
+                                <li class="flex items-start gap-3 font-InterTight font-normal md:text-base text-sm leading-6 text-secondaryColor">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.5206 12.0006C20.5206 7.16214 16.5987 3.24023 11.7603 3.24023C6.9219 3.24023 3 7.16214 3 12.0006C3 16.839 6.9219 20.7609 11.7603 20.7609C16.5987 20.7609 20.5206 16.839 20.5206 12.0006Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M21.0009 5.40234C16.218 8.07985 13.2505 12.4065 11.8408 15.0548C10.8746 13.433 9.64972 11.9911 8.16016 10.7331" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    Startups needing a complete brand identity
+                                </li>
+
+                                <li class="flex items-start gap-3 font-InterTight font-normal md:text-base text-sm leading-6 text-secondaryColor">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.5206 12.0006C20.5206 7.16214 16.5987 3.24023 11.7603 3.24023C6.9219 3.24023 3 7.16214 3 12.0006C3 16.839 6.9219 20.7609 11.7603 20.7609C16.5987 20.7609 20.5206 16.839 20.5206 12.0006Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M21.0009 5.40234C16.218 8.07985 13.2505 12.4065 11.8408 15.0548C10.8746 13.433 9.64972 11.9911 8.16016 10.7331" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    Businesses undergoing a rebrand
+                                </li>
+
+                                <li class="flex items-start gap-3 font-InterTight font-normal md:text-base text-sm leading-6 text-secondaryColor">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.5206 12.0006C20.5206 7.16214 16.5987 3.24023 11.7603 3.24023C6.9219 3.24023 3 7.16214 3 12.0006C3 16.839 6.9219 20.7609 11.7603 20.7609C16.5987 20.7609 20.5206 16.839 20.5206 12.0006Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M21.0009 5.40234C16.218 8.07985 13.2505 12.4065 11.8408 15.0548C10.8746 13.433 9.64972 11.9911 8.16016 10.7331" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    Creators or influencers building a personal brand
+                                </li>
+
+                                <li class="flex items-start gap-3 font-InterTight font-normal md:text-base text-sm leading-6 text-secondaryColor">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.5206 12.0006C20.5206 7.16214 16.5987 3.24023 11.7603 3.24023C6.9219 3.24023 3 7.16214 3 12.0006C3 16.839 6.9219 20.7609 11.7603 20.7609C16.5987 20.7609 20.5206 16.839 20.5206 12.0006Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M21.0009 5.40234C16.218 8.07985 13.2505 12.4065 11.8408 15.0548C10.8746 13.433 9.64972 11.9911 8.16016 10.7331" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    Companies looking for cohesive and strategic brand visuals
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="xl:w-408 w-full">
+                    <div class="bg-white rounded-xl p-7">
+                        <h4 class="font-InterTight font-normal text-24xl leading-32 text-primaryColor">Other Services</h4>
+                        <div class="border border-borderColor rounded-lg mt-7 flex justify-between items-center p-4 group hover:bg-primaryColor transition ease-in-out duration-700 hover:transition hover:ease-in-out hover:duration-700">
+                            <h4 class="font-InterTight font-normal text-base leading-6 text-primaryColor group-hover:text-white transition ease-in-out duration-700 group-hover:transition group-hover:ease-in-out group-hover:duration-700">UI/UX Design</h4>
+                            <a href="#" class="bg-mainBanner py-4 px-5 rounded-[100px] group-hover:bg-white transition ease-in-out duration-700 group-hover:transition group-hover:ease-in-out group-hover:duration-700">
+                                <svg width="34" height="10" viewBox="0 0 34 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M29 1L33 5M33 5L29 9M33 5H1" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="border border-borderColor rounded-lg mt-7 flex justify-between items-center p-4 group hover:bg-primaryColor transition ease-in-out duration-700 hover:transition hover:ease-in-out hover:duration-700">
+                            <h4 class="font-InterTight font-normal text-base leading-6 text-primaryColor group-hover:text-white transition ease-in-out duration-700 group-hover:transition group-hover:ease-in-out group-hover:duration-700">Development</h4>
+                            <a href="#" class="bg-mainBanner py-4 px-5 rounded-[100px] group-hover:bg-white transition ease-in-out duration-700 group-hover:transition group-hover:ease-in-out group-hover:duration-700">
+                                <svg width="34" height="10" viewBox="0 0 34 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M29 1L33 5M33 5L29 9M33 5H1" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="border border-borderColor rounded-lg mt-7 flex justify-between items-center p-4 group hover:bg-primaryColor transition ease-in-out duration-700 hover:transition hover:ease-in-out hover:duration-700">
+                            <h4 class="font-InterTight font-normal text-base leading-6 text-primaryColor group-hover:text-white transition ease-in-out duration-700 group-hover:transition group-hover:ease-in-out group-hover:duration-700">Digital Marketer</h4>
+                            <a href="#" class="bg-mainBanner py-4 px-5 rounded-[100px] group-hover:bg-white transition ease-in-out duration-700 group-hover:transition group-hover:ease-in-out group-hover:duration-700">
+                                <svg width="34" height="10" viewBox="0 0 34 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M29 1L33 5M33 5L29 9M33 5H1" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-7 mt-7">
+                        <h4 class="font-InterTight font-normal text-24xl leading-32 text-primaryColor">Get a Quote</h4>
+                        <form action="">
+                            <input class="mt-7 w-full border border-borderColor bg-transparent focus:outline-none py-2.5 px-4 rounded-lg font-InterTight font-normal text-base leading-7 text-secondaryColor placeholder:text-base placeholder:leading-7 placeholder:text-secondaryColor" type="text" placeholder="Name">    
+                            <input class="mt-4 w-full border border-borderColor bg-transparent focus:outline-none py-2.5 px-4 rounded-lg font-InterTight font-normal text-base leading-7 text-secondaryColor placeholder:text-base placeholder:leading-7 placeholder:text-secondaryColor" type="text" placeholder="Email">    
+                            <div class="relative mt-3">
+                                <div>
+                                    <select 
+                                        name="" 
+                                        id="insurance-dropdown" 
+                                        class="appearance-none w-full border border-borderColor bg-transparent focus:outline-none py-2.5 px-4 rounded-lg font-InterTight font-normal text-base leading-7 text-secondaryColor placeholder:text-base placeholder:leading-7 placeholder:text-secondaryColor">
+                                        <option value="" class="text-secondaryColor">Select service</option>
+                                        <option value="10">Office Cleaning</option>
+                                        <option value="20">Choice 3</option>
+                                        <option value="30">Choice 4</option>
+                                        <option value="40">Choice 5</option>
+                                        <option value="40">Choice 6</option>
+                                    </select>
+                                    <div 
+                                        id="dropdown-container" 
+                                        class="poSora-events-auto absolute inset-y-0 right-0 flex items-center pr-4 cursor-poSora transform transition-transform duration-300">
+                                        <svg 
+                                            id="dropdown-svg" 
+                                            class="h-4 w-4 text-[#1507644D] transition-transform duration-300" 
+                                            fill="none" 
+                                            stroke="currentColor" 
+                                            viewBox="0 0 24 24" 
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path 
+                                                stroke-linecap="round" 
+                                                stroke-linejoin="round" 
+                                                stroke-width="2" 
+                                                d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>   
+                            <textarea placeholder="Message..." class="h-48 mt-4 w-full border border-borderColor bg-transparent focus:outline-none py-2.5 px-4 rounded-lg font-InterTight font-normal text-base leading-7 text-secondaryColor placeholder:text-base placeholder:leading-7 placeholder:text-secondaryColor"></textarea>        
+                            <div class="mt-4">
+                                <a href="#" class="block text-center font-InterTight font-medium text-base leading-6 text-white bg-primaryColor py-2.5 px-5 rounded-full border border-primaryColor hover:border-borderColor hover:bg-transparent hover:text-primaryColor transition ease-in-out duration-500 hover:transition hover:ease-in-out hover:duration-500">Submit Message</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner Area End Here -->
+
+    <!-- Promo Area Start Here -->
+    <section class="lg:mt-[150px] md:mt-20 mt-10">
+        <div
+            data-aos="fade-down"
+                data-aos-duration="1000"
+                data-aos-offset="20"
+                data-aos-once="true"
+        class="xl:w-[1280px] w-auto mx-auto xl:px-0 px-[18px]">
+            <div class="bg-[#EAEAEA] bg-center bg-no-repeat w-full rounded-xl" style="background-image: url('assets/img/pattern.svg');">
+                <div class="lg:py-20 lg:px-20 py-10 px-5">
+                    <div class="w-full max-w-[656px] mx-auto lg:px-4">
+                        <h3 class="font-InterTight font-normal text-center md:text-60xl text-40xl leading-[48px] md:leading-64 text-primaryColor">Let’s Create Something Great Together</h3>
+                        <p class="font-InterTight text-center font-normal text-base leading-7 text-secondaryColor pt-5">Ready to elevate your brand? Reach out today to start your next project with us.</p>
+                        <div class="md:mt-[60px] mt-10 text-center flex md:flex-row flex-col justify-center gap-4 md:w-[294px] w-full mx-auto">
+                            <a href="contact.html" class="md:inline-block block text-center font-InterTight font-medium text-base leading-6 text-white bg-primaryColor py-2.5 px-5 rounded-full hover:bg-white hover:text-primaryColor transition ease-in-out duration-500 hover:transition hover:ease-in-out hover:duration-500">Contact Us</a>
+                            <a href="pricing.html" class="md:inline-block block text-center font-InterTight font-medium text-base leading-6 text-primaryColor bg-white py-2.5 px-5 rounded-full hover:bg-primaryColor hover:text-white transition ease-in-out duration-500 hover:transition hover:ease-in-out hover:duration-500">Book a Call</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Promo Area End Here -->
+
+    <!-- Footer Area Start Here -->
+    <section class="lg:mt-[150px] md:mt-20 mt-10 bg-black">
+        <div class="xl:w-[1280px] w-auto mx-auto xl:px-0 px-[18px]">
+            <div
+                data-aos="fade-down"
+                data-aos-duration="1000"
+                data-aos-offset="20"
+                data-aos-once="true"
+            class="md:py-20 py-10">
+                <div class="flex lg:flex-row flex-col justify-between items-start xl:gap-y-0 gap-y-10">
+                    <div class="lg:w-[288px] w-full ">
+                        <span class="font-InterTight font-normal text-sm leading-6 text-white text-opacity-70">Let's start a conversation</span>
+                        <a href="#" class="font-InterTight font-normal text-xl leading-8 text-[#EDECE4] pt-3 block">hi.nexivo@gmail.com</a>
+                        <a href="#" class="font-InterTight font-normal text-xl leading-8 text-[#EDECE4] pt-3 block">+1 (123) 456 7890</a>
+                    </div>
+
+                    <div class="lg:w-[912px] w-full grid xl:grid-cols-4 md:grid-cols-3 grid-cols-1 xl:gap-y-0 gap-y-10">
+                        <div>
+                            <span class="font-InterTight font-normal text-sm leading-6 text-white text-opacity-70">Useful Link</span>
+                            <ul>
+                                <li class="group relative w-max">
+                                    <a href="index.html" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-3 block">Home</a>
+                                    <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[1px] bg-white group-hover:w-full"></span>
+                                </li>
+                                <li class="group relative w-max">
+                                    <a href="about.html" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-4 block">About Us</a>
+                                    <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[1px] bg-white group-hover:w-full"></span>
+                                </li>
+                                <li class="group relative w-max">
+                                    <a href="service.html" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-4 block">Services</a>
+                                    <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[1px] bg-white group-hover:w-full"></span>
+                                </li>
+                                <li class="group relative w-max">
+                                    <a href="works.html" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-4 block">Works</a>
+                                    <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[1px] bg-white group-hover:w-full"></span>
+                                </li>
+                                <li class="group relative w-max">
+                                    <a href="contact.html" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-4 block">Contact Us</a>
+                                    <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[1px] bg-white group-hover:w-full"></span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="">
+                            <span class="font-InterTight font-normal text-sm leading-6 text-white text-opacity-70">Based on</span>
+                            <ul>
+                                <li class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-3 block">New York, USA</li>
+                                <li class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-3">Dubai, UAE</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <span class="font-InterTight font-normal text-sm leading-6 text-white text-opacity-70">Follow us</span>
+                            <ul>
+                                <li><a href="#" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-3 block">LinkedIn</a></li>
+                                <li><a href="#" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-3 block">Twitter</a></li>
+                                <li><a href="#" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-3 block">Behance</a></li>
+                                <li><a href="#" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-3 block">Dribbble</a></li>
+                            </ul>
+                        </div>
+
+                       <div class="">
+                            <span class="font-InterTight font-normal text-sm leading-6 text-white text-opacity-70">Based on</span>
+                            <ul>
+                                <li class="group relative w-max">
+                                    <a href="terms.html" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-3 block">Terms & Conditions</a>
+                                    <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[1px] bg-white group-hover:w-full"></span>
+                                </li>
+                                <li class="group relative w-max">
+                                    <a href="policy.html" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-4 block">Privacy Policy</a>
+                                    <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[1px] bg-white group-hover:w-full"></span>
+                                </li>
+                            </ul>
+                       </div>
+                    </div>
+                </div>
+                <hr class="border border-white border-opacity-30 my-8"/>
+
+                <div class="flex md:flex-row flex-col justify-between items-start xl:gap-0 gap-2">
+                    <p class="font-InterTight font-normal text-base leading-7 text-white text-opacity-70">&copy; 2025 Company All rights reserved.</p>
+                    <a href="#" class="font-InterTight font-normal text-base leading-7 text-white text-opacity-70">Design @Figma</a>
+                </div>
+            </div>
+             <img
+                data-aos="zoom-in"
+                data-aos-duration="1000"
+                data-aos-offset="20"
+                data-aos-once="true"
+             class="w-full" src="assets/img/footer-logo.svg" alt="">
+        </div>
+       
+    </section>
+    <!-- Footer Area End Here -->
+
+    <script src="assets/js/alpine.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/aos_script.js"></script>
+</body>
+</html>

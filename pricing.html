@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="assets/img/icon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexivo || Pricing Page</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+</head>
+<body class="bg-mainBanner">
+
+    <!-- Header Area Start Here -->
+    <header class="pt-7">
+        <div class="xl:w-[1280px] w-auto mx-auto xl:px-0 px-[18px]">
+            <nav class="p-2 bg-white rounded-full relative z-30">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <a href="index.html">
+                            <img class="w-[127px]" src="assets/img/logo.svg" alt="">
+                        </a>
+                    </div>
+                    <div class=" lg:block hidden">
+                        <ul class="flex items-center gap-10">
+                            <li class="group relative w-max">
+                                <a href="index.html" class="text-base font-InterTight font-normal leading-6 text-secondaryColor transition ease-in-out duration-500 hover:text-primaryColor hover:transition hover:ease-in-out hover:duration-500">Home</a>
+                                <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[2px] bg-primaryColor group-hover:w-full"></span>
+                            
+                            </li>
+                            <li class="group relative w-max">
+                                <a href="about.html" class="text-base font-InterTight font-normal leading-6 text-secondaryColor transition ease-in-out duration-500 hover:text-primaryColor hover:transition hover:ease-in-out hover:duration-500">About Us</a>
+                                <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[2px] bg-primaryColor group-hover:w-full"></span>
+                            </li>
+                            <li class="group relative w-max">
+                                <a href="service.html" class="text-base font-InterTight font-normal leading-6 text-secondaryColor transition ease-in-out duration-500 hover:text-primaryColor hover:transition hover:ease-in-out hover:duration-500">Services</a>
+                                <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[2px] bg-primaryColor group-hover:w-full"></span>
+                            </li>
+                            <li class="group relative w-max">
+                                <a href="works.html" class="text-base font-InterTight font-normal leading-6 text-secondaryColor transition ease-in-out duration-500 hover:text-primaryColor hover:transition hover:ease-in-out hover:duration-500">Works</a>
+                                <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[2px] bg-primaryColor group-hover:w-full"></span>
+                            </li>
+                            <li class="py-1.5 group flex items-center relative" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
+                                <a href="#" onclick="event.preventDefault()" class="inline-flex items-center text-base font-InterTight font-normal text-secondaryColor hover:text-primaryColor transition ease-in-out duration-500"
+                                    @click.prevent="open = !open" :class="{ 'text-LavenderIndigo': open }">
+                                    Pages
+                                    <svg :class="{ 'rotate-180': open }" class="ml-2 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" width="11" height="6" fill="none" viewBox="0 0 11 6">
+                                        <path d="M1.5 1L5.5 5L9.5 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+
+                                <!-- Dropdown content  -->
+                                <ul id="dropdown" class="absolute left-0 top-8 w-48 py-2 list-none bg-white rounded-md hidden z-10 group-hover:block border border-borderColor" :class="{ 'block': open, 'hidden': !open }">
+                                    <!-- Dropdown items -->
+                                    <li>
+                                        <a href="services-details.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Service Details Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="work-details.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Works details Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="blog.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Blog Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="blog-details.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Blog details Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="faq.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">FAQ</a>
+                                    </li>
+                                    <li>
+                                        <a href="pricing.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Pricing</a>
+                                    </li>
+                                    <li>
+                                        <a href="404.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">404 Page</a>
+                                    </li>
+                                </ul>
+                            </li>   
+                        </ul>
+                    </div>
+
+                    <!-- Menu button for mobile -->
+                    <div class="flex items-center lg:hidden sm:block">
+                        <button id="mobileMenuButton" class="focus:outline-none bg-primaryColor w-11 h-11 rounded-full flex justify-center items-center">
+                            <svg id="menuIcon" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="white">
+                                <path id="menuOpenIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                                <path id="menuCloseIcon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="lg:block hidden">
+                        <a href="contact.html" class="font-InterTight font-medium text-base leading-6 text-white bg-primaryColor py-2.5 px-5 rounded-full border border-primaryColor hover:border-borderColor hover:bg-transparent hover:text-primaryColor transition ease-in-out duration-500 hover:transition hover:ease-in-out hover:duration-500">Contact Us</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div id="mobileMenu" class="border border-borderColor bg-white shadow-btn hidden rounded-R_5 my-2 py-7 transition-height transition-all duration-1000 ease-in-out overflow-hidden absolute inset-x-0 top-[65px] z-50">
+                    <div class="">
+                        <ul class="dropdown flex flex-col gap-y-5 px-5">
+                            <li class="group relative w-max">
+                                <a href="index.html" class="text-lg font-InterTight font-normal leading-8 text-secondaryColor transition ease-in-out duration-500 hover:text-primaryColor hover:transition hover:ease-in-out hover:duration-500">Home</a>
+                                <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[2px] bg-primaryColor group-hover:w-full"></span>
+                            
+                            </li>
+                            <li class="group relative w-max">
+                                <a href="about.html" class="text-lg font-InterTight font-normal leading-8 text-secondaryColor transition ease-in-out duration-500 hover:text-primaryColor hover:transition hover:ease-in-out hover:duration-500">About Us</a>
+                                <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[2px] bg-primaryColor group-hover:w-full"></span>
+                            </li>
+                            <li class="group relative w-max">
+                                <a href="service.html" class="text-lg font-InterTight font-normal leading-8 text-secondaryColor transition ease-in-out duration-500 hover:text-primaryColor hover:transition hover:ease-in-out hover:duration-500">Services</a>
+                                <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[2px] bg-primaryColor group-hover:w-full"></span>
+                            </li>
+                            <li class="group relative w-max">
+                                <a href="works.html" class="text-lg font-InterTight font-normal leading-8 text-secondaryColor transition ease-in-out duration-500 hover:text-primaryColor hover:transition hover:ease-in-out hover:duration-500">works</a>
+                                <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[2px] bg-primaryColor group-hover:w-full"></span>
+                            </li>
+                            <li class=" group relative">
+                                <!-- Icon added here for the mobile menu -->
+                                <a href="javascript:void(0);" id="mobileFeaturesToggle" class=" pb-5 flex justify-between text-lg font-InterTight font-normal leading-8 text-primaryColor items-center">
+                                    Pages
+                                    <svg id="mobileDropdownIcon" class="ml-2 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" width="11" height="6" fill="none" viewBox="0 0 11 6">
+                                        <path d="M1.5 1L5.5 5L9.5 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                                <ul id="mobileDropdownMenu" class="hidden bg-bg mb-5 rounded-md shadow-2xl bg-white">
+                                    <!-- Dropdown items -->
+                                    <li>
+                                        <a href="services-details.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Service Details Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="work-details.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Works details Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="blog.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Blog Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="blog-details.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Blog details Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="faq.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">FAQ</a>
+                                    </li>
+                                    <li>
+                                        <a href="pricing.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Pricing</a>
+                                    </li>
+                                    <li>
+                                        <a href="404.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">404 Page</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="lg:hidden block text-center mt-5">
+                        <a href="contact.html" class="font-InterTight font-medium text-base leading-6 text-white bg-primaryColor py-2.5 px-5 rounded-full border border-primaryColor hover:border-borderColor hover:bg-transparent hover:text-primaryColor transition ease-in-out duration-500 hover:transition hover:ease-in-out hover:duration-500">Contact Us</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Header Area End Here -->
+
+
+    <!-- Pricing Area Start Here -->
+    <section class="md:mt-[100px] mt-10">
+        <div class="xl:w-[1280px] w-auto mx-auto xl:px-0 px-[18px]">
+            <div
+                data-aos="fade-down"
+                data-aos-duration="1000"
+                data-aos-offset="20"
+                data-aos-once="true"
+            class="">
+                <h1 class="lg:w-[650px] w-full mx-auto font-InterTight text-center font-normal md:text-60xl text-40xl leading-[48px] md:leading-64 text-primaryColor">Flexible Pricing to Match Your Needs</h1>
+                <p class="font-InterTight font-normal text-base leading-7 text-secondaryColor text-center lg:w-517 w-full mx-auto pt-5">We’re a full-service creative agency crafting bold designs, powerful brands, and impactful digital strategies to grow your business.</p>
+            </div>
+
+            <div
+                data-aos="fade-down"
+                data-aos-duration="1000"
+                data-aos-offset="20"
+                data-aos-once="true"
+            class="lg:mt-[60px] mt-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7">
+                <div class="bg-white p-7 rounded-xl">
+                    <span class="font-InterTight font-normal text-base leading-6 text-secondaryColor">Starter</span>
+                    <h4 class="font-InterTight font-normal text-primaryColor text-40xl leading-44 pt-4">$499<span class="inline-block text-secondaryColor text-sm leading-5 pl-2">/month</span></h4>
+                    <p class="font-InterTight font-normal text-base leading-6 text-secondaryColor pt-2">Perfect for individuals and startups just getting started their business.</p>
+                    <a href="pricing.html" class="font-InterTight font-medium mt-7 text-base leading-6 text-primaryColor border border-borderColor text-center bg-transparent py-2.5 px-5 rounded-full block transition ease-in-out duration-500 hover:bg-primaryColor hover:text-white hover:transition hover:ease-in-out hover:duration-500">Get Starter</a>
+
+                    <div class="mt-7">
+                        <h4 class="font-InterTight font-normal text-base leading-6 text-primaryColor">What’s included:</h4>
+
+                        <ul class="mt-3">
+                            <li class="flex gap-3 items-center font-InterTight font-normal text-sm leading-5 text-primaryColor">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="16" height="16" rx="8" fill="black"/>
+                                    <path d="M11.3601 5.47949L6.74014 10.0995L4.64014 7.99949" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                10 design requests/month
+                            </li>
+                            <li class="flex gap-3 items-center pt-3 font-InterTight font-normal text-sm leading-5 text-primaryColor">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="16" height="16" rx="8" fill="black"/>
+                                    <path d="M11.3601 5.47949L6.74014 10.0995L4.64014 7.99949" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                1 brand profile
+                            </li>
+                            <li class="flex gap-3 items-center pt-3 font-InterTight font-normal text-sm leading-5 text-primaryColor">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="16" height="16" rx="8" fill="black"/>
+                                    <path d="M11.3601 5.47949L6.74014 10.0995L4.64014 7.99949" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Turnaround: 3–5 business days
+                            </li>
+                            <li class="flex gap-3 items-center pt-3 font-InterTight font-normal text-sm leading-5 text-primaryColor">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="16" height="16" rx="8" fill="black"/>
+                                    <path d="M11.3601 5.47949L6.74014 10.0995L4.64014 7.99949" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Email support
+                            </li>
+                            <li class="flex gap-3 items-center pt-3 font-InterTight font-normal text-sm leading-5 text-secondaryColor">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="16" height="16" rx="8" fill="#9E9E9E"/>
+                                    <path d="M11.3601 5.47949L6.74014 10.0995L4.64014 7.99949" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Dedicated project manager
+                            </li>
+                            <li class="flex gap-3 items-center pt-3 font-InterTight font-normal text-sm leading-5 text-secondaryColor">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="16" height="16" rx="8" fill="#9E9E9E"/>
+                                    <path d="M11.3601 5.47949L6.74014 10.0995L4.64014 7.99949" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Unlimited revisions
+                            </li>
+                            <li class="flex gap-3 items-center pt-3 font-InterTight font-normal text-sm leading-5 text-secondaryColor">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="16" height="16" rx="8" fill="#9E9E9E"/>
+                                    <path d="M11.3601 5.47949L6.74014 10.0995L4.64014 7.99949" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Web development tasks
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="bg-white p-7 rounded-xl border border-primaryColor relative">
+                    <div class="absolute bg-white left-1/2 -top-4 transform -translate-x-1/2 border border-primaryColor w-[83px] py-1.5 rounded-[100px]">
+                        <h4 class="font-InterTight font-normal uppercase text-xs leading-4 text-center text-primaryColor">popular</h4>
+                    </div>
+                    <span class="font-InterTight font-normal text-base leading-6 text-secondaryColor">Professional </span>
+                    <h4 class="font-InterTight font-normal text-primaryColor text-40xl leading-44 pt-4">$999<span class="inline-block text-secondaryColor text-sm leading-5 pl-2">/month</span></h4>
+                    <p class="font-InterTight font-normal text-base leading-6 text-secondaryColor pt-2">Ideal for growing teams needing more support and faster delivery.</p>
+                    <a href="pricing.html" class="font-InterTight font-medium mt-7 text-base leading-6 text-white text-center bg-primaryColor py-2.5 px-5 rounded-full block">Choose Professional</a>
+
+                    <div class="mt-7">
+                        <h4 class="font-InterTight font-normal text-base leading-6 text-primaryColor">What’s included:</h4>
+
+                        <ul class="mt-3">
+                            <li class="flex gap-3 items-center font-InterTight font-normal text-sm leading-5 text-primaryColor">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="16" height="16" rx="8" fill="black"/>
+                                    <path d="M11.3601 5.47949L6.74014 10.0995L4.64014 7.99949" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                25 design requests/month
+                            </li>
+                            <li class="flex gap-3 items-center pt-3 font-InterTight font-normal text-sm leading-5 text-primaryColor">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="16" height="16" rx="8" fill="black"/>
+                                    <path d="M11.3601 5.47949L6.74014 10.0995L4.64014 7.99949" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                3 brand profile
+                            </li>
+                            <li class="flex gap-3 items-center pt-3 font-InterTight font-normal text-sm leading-5 text-primaryColor">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="16" height="16" rx="8" fill="black"/>
+                                    <path d="M11.3601 5.47949L6.74014 10.0995L4.64014 7.99949" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Turnaround: 2–4 business days
+                            </li>
+                            <li class="flex gap-3 items-center pt-3 font-InterTight font-normal text-sm leading-5 text-primaryColor">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="16" height="16" rx="8" fill="black"/>
+                                    <path d="M11.3601 5.47949L6.74014 10.0995L4.64014 7.99949" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Priority support
+                            </li>
+                            <li class="flex gap-3 items-center pt-3 font-InterTight font-normal text-sm leading-5 text-primaryColor">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="16" height="16" rx="8" fill="black"/>
+                                    <path d="M11.3601 5.47949L6.74014 10.0995L4.64014 7.99949" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Dedicated project manager
+                            </li>
+                            <li class="flex gap-3 items-center pt-3 font-InterTight font-normal text-sm leading-5 text-secondaryColor">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="16" height="16" rx="8" fill="#9E9E9E"/>
+                                    <path d="M11.3601 5.47949L6.74014 10.0995L4.64014 7.99949" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Unlimited revisions
+                            </li>
+                            <li class="flex gap-3 items-center pt-3 font-InterTight font-normal text-sm leading-5 text-secondaryColor">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="16" height="16" rx="8" fill="#9E9E9E"/>
+                                    <path d="M11.3601 5.47949L6.74014 10.0995L4.64014 7.99949" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Web development tasks
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white p-7 rounded-xl">
+                    <span class="font-InterTight font-normal text-base leading-6 text-secondaryColor">Premium</span>
+                    <h4 class="font-InterTight font-normal text-primaryColor text-40xl leading-44 pt-4">$1,999<span class="inline-block text-secondaryColor text-sm leading-5 pl-2">/month</span></h4>
+                    <p class="font-InterTight font-normal text-base leading-6 text-secondaryColor pt-2">Whatever you need, from quick help to big problems we've got your back.</p>
+                    <a href="pricing.html" class="font-InterTight font-medium mt-7 text-base leading-6 text-primaryColor border border-borderColor text-center bg-transparent py-2.5 px-5 rounded-full block transition ease-in-out duration-500 hover:bg-primaryColor hover:text-white hover:transition hover:ease-in-out hover:duration-500">Upgrade to Premium</a>
+
+                    <div class="mt-7">
+                        <h4 class="font-InterTight font-normal text-base leading-6 text-primaryColor">What’s included:</h4>
+
+                        <ul class="mt-3">
+                            <li class="flex gap-3 items-center font-InterTight font-normal text-sm leading-5 text-primaryColor">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="16" height="16" rx="8" fill="black"/>
+                                    <path d="M11.3601 5.47949L6.74014 10.0995L4.64014 7.99949" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Unlimited design requests
+                            </li>
+                            <li class="flex gap-3 items-center pt-3 font-InterTight font-normal text-sm leading-5 text-primaryColor">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="16" height="16" rx="8" fill="black"/>
+                                    <path d="M11.3601 5.47949L6.74014 10.0995L4.64014 7.99949" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Unlimited brand profiles
+                            </li>
+                            <li class="flex gap-3 items-center pt-3 font-InterTight font-normal text-sm leading-5 text-primaryColor">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="16" height="16" rx="8" fill="black"/>
+                                    <path d="M11.3601 5.47949L6.74014 10.0995L4.64014 7.99949" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Turnaround: 1–2 business days
+                            </li>
+                            <li class="flex gap-3 items-center pt-3 font-InterTight font-normal text-sm leading-5 text-primaryColor">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="16" height="16" rx="8" fill="black"/>
+                                    <path d="M11.3601 5.47949L6.74014 10.0995L4.64014 7.99949" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Premium support
+                            </li>
+                            <li class="flex gap-3 items-center pt-3 font-InterTight font-normal text-sm leading-5 text-primaryColor">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="16" height="16" rx="8" fill="black"/>
+                                    <path d="M11.3601 5.47949L6.74014 10.0995L4.64014 7.99949" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Dedicated project manager
+                            </li>
+                            <li class="flex gap-3 items-center pt-3 font-InterTight font-normal text-sm leading-5 text-primaryColor">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="16" height="16" rx="8" fill="black"/>
+                                    <path d="M11.3601 5.47949L6.74014 10.0995L4.64014 7.99949" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Unlimited revisions
+                            </li>
+                            <li class="flex gap-3 items-center pt-3 font-InterTight font-normal text-sm leading-5 text-primaryColor">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="16" height="16" rx="8" fill="black"/>
+                                    <path d="M11.3601 5.47949L6.74014 10.0995L4.64014 7.99949" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Web development tasks
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                data-aos="fade-down"
+                data-aos-duration="1000"
+                data-aos-offset="20"
+                data-aos-once="true"
+            class="mt-7">
+                <div class="bg-white p-7 flex lg:flex-row flex-col justify-between items-center rounded-xl lg:gap-0 gap-5">
+                    <div class="lg:w-900 w-full">
+                        <h4 class="font-InterTight font-normal md:text-32xl text-24xl leading-32 md:leading-10 text-primaryColor lg:text-left md:text-center">Need a Custom Solution?</h4>
+                        <p class="font-InterTight font-normal text-base leading-6 text-secondaryColor pt-2 lg:text-left md:text-center">If none of these fit your vision, we’ll craft a custom plan tailored to your goals.</p>
+                    </div>
+
+                    <div class="text-center flex md:flex-row flex-col justify-center gap-4 lg:w-[350px] w-full">
+                        <a href="pricing.html" class="md:inline-block block text-center font-InterTight font-medium text-base leading-6 text-white bg-primaryColor py-2.5 px-5 rounded-full border border-primaryColor hover:border-borderColor hover:bg-white hover:text-primaryColor transition ease-in-out duration-500 hover:transition hover:ease-in-out hover:duration-500">Book a Call</a>
+                        <a href="contact.html" class="md:inline-block block text-center font-InterTight font-medium text-base leading-6 text-primaryColor border border-borderColor bg-white py-2.5 px-5 rounded-full  hover:border-primaryColor hover:bg-primaryColor hover:text-white transition ease-in-out duration-500 hover:transition hover:ease-in-out hover:duration-500">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Pricing Area End Here -->
+
+    <!-- Plans Area Start Here -->
+    <section class="lg:mt-[150px] md:mt-[100px] mt-10">
+        <div class="xl:w-[1280px] w-auto mx-auto xl:px-0 px-[18px]">
+            <div
+                data-aos="fade-down"
+                data-aos-duration="1000"
+                data-aos-offset="20"
+                data-aos-once="true"
+            class="">
+                <h1 class="lg:w-[650px] w-full mx-auto font-InterTight text-center font-normal md:text-60xl text-40xl leading-[48px] md:leading-64 text-primaryColor">Compare Plans</h1>
+                <p class="font-InterTight font-normal text-base leading-7 text-secondaryColor text-center lg:w-517 w-full mx-auto pt-5">We’re here to make that decision easier for you.</p>
+            </div>
+
+            <div 
+                data-aos="fade-down"
+                data-aos-duration="1000"
+                data-aos-offset="20"
+                data-aos-once="true"
+            class="border border-borderColor mt-[60px] rounded-xl md:overflow-hidden overflow-x-scroll">
+                <table class="w-full px-6">
+                    <thead>
+                        <tr class="">
+                            <th class="py-4 px-6 font-InterTight text-left font-medium text-base leading-6 text-primaryColor">Features</th>
+                            <th class="py-4 px-6 font-InterTight text-left font-medium text-base leading-6 text-primaryColor">Starter</th>
+                            <th class="py-4 px-6 font-InterTight text-left font-medium text-base leading-6 text-primaryColor">Professional</th>
+                            <th class="py-4 px-6 font-InterTight text-left font-medium text-base leading-6 text-primaryColor">Premium</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-t border-borderColor">
+                            <td class="px-6 py-4 font-Inter font-normal text-base leading-6 text-primaryColor">Monthly Price</td>
+                            <td class="px-6 py-4 font-Inter font-normal text-base leading-6 text-SecondaryColor">$499</td>
+                            <td class="px-6 py-4 font-Inter font-normal text-base leading-6 text-SecondaryColor">$999</td>
+                            <td class="px-6 py-4 font-Inter font-normal text-base leading-6 text-SecondaryColor">$1999</td>
+                        </tr>
+
+                        <tr class="border-t border-borderColor">
+                            <td class="px-6 py-4 font-Inter font-normal text-base leading-6 text-primaryColor">Design Requests</td>
+                            <td class="px-6 py-4 font-Inter font-normal text-base leading-6 text-SecondaryColor">10/month</td>
+                            <td class="px-6 py-4 font-Inter font-normal text-base leading-6 text-SecondaryColor">25/month</td>
+                            <td class="px-6 py-4 font-Inter font-normal text-base leading-6 text-SecondaryColor">Unlimited</td>
+                        </tr>
+
+                        <tr class="border-t border-borderColor">
+                            <td class="px-6 py-4 font-Inter font-normal text-base leading-6 text-primaryColor">Brand Profiles</td>
+                            <td class="px-6 py-4 font-Inter font-normal text-base leading-6 text-SecondaryColor">1</td>
+                            <td class="px-6 py-4 font-Inter font-normal text-base leading-6 text-SecondaryColor">2</td>
+                            <td class="px-6 py-4 font-Inter font-normal text-base leading-6 text-SecondaryColor">Unlimited</td>
+                        </tr>
+
+                        <tr class="border-t border-borderColor">
+                            <td class="px-6 py-4 font-Inter font-normal text-base leading-6 text-primaryColor">Support</td>
+                            <td class="px-6 py-4 font-Inter font-normal text-base leading-6 text-SecondaryColor">3–5 days</td>
+                            <td class="px-6 py-4 font-Inter font-normal text-base leading-6 text-SecondaryColor">2–4 days</td>
+                            <td class="px-6 py-4 font-Inter font-normal text-base leading-6 text-SecondaryColor">1–2 days</td>
+                        </tr>
+
+                        <tr class="border-t border-borderColor">
+                            <td class="px-6 py-4 font-Inter font-normal text-base leading-6 text-primaryColor">Project Manager</td>
+                            <td class="px-6 py-4">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 12C21 7.02908 16.9709 3 12 3C7.02908 3 3 7.02908 3 12C3 16.9699 7.02908 21 12 21C16.9709 21 21 16.9699 21 12Z" stroke="#535353" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M14.3304 9.66744L9.66792 14.33M14.3363 14.3363L9.66602 9.66602" stroke="#535353" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+
+                            </td>
+                            <td class="px-6 py-4">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 12C21 7.02908 16.9709 3 12 3C7.02908 3 3 7.02908 3 12C3 16.9699 7.02908 21 12 21C16.9709 21 21 16.9699 21 12Z" stroke="#535353" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M8.53516 12.0003L10.845 14.3091L15.4627 9.69141" stroke="#535353" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </td>
+                            <td class="px-6 py-4">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 12C21 7.02908 16.9709 3 12 3C7.02908 3 3 7.02908 3 12C3 16.9699 7.02908 21 12 21C16.9709 21 21 16.9699 21 12Z" stroke="#535353" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M8.53516 12.0003L10.845 14.3091L15.4627 9.69141" stroke="#535353" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </td>
+                        </tr>
+
+                        <tr class="border-t border-borderColor">
+                            <td class="px-6 py-4 font-Inter font-normal text-base leading-6 text-primaryColor">Revisions</td>
+                            <td class="px-6 py-4">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 12C21 7.02908 16.9709 3 12 3C7.02908 3 3 7.02908 3 12C3 16.9699 7.02908 21 12 21C16.9709 21 21 16.9699 21 12Z" stroke="#535353" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M14.3304 9.66744L9.66792 14.33M14.3363 14.3363L9.66602 9.66602" stroke="#535353" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+
+                            </td>
+                            <td class="px-6 py-4 font-Inter font-normal text-base leading-6 text-SecondaryColor">Up to 3</td>
+                            <td class="px-6 py-4 font-Inter font-normal text-base leading-6 text-SecondaryColor">Unlimited</td>
+                        </tr>
+
+                        <tr class="border-t border-borderColor">
+                            <td class="px-6 py-4 font-Inter font-normal text-base leading-6 text-primaryColor">Web Development</td>
+                            <td class="px-6 py-4">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 12C21 7.02908 16.9709 3 12 3C7.02908 3 3 7.02908 3 12C3 16.9699 7.02908 21 12 21C16.9709 21 21 16.9699 21 12Z" stroke="#535353" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M14.3304 9.66744L9.66792 14.33M14.3363 14.3363L9.66602 9.66602" stroke="#535353" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+
+                            </td>
+                            <td class="px-6 py-4">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 12C21 7.02908 16.9709 3 12 3C7.02908 3 3 7.02908 3 12C3 16.9699 7.02908 21 12 21C16.9709 21 21 16.9699 21 12Z" stroke="#535353" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M14.3304 9.66744L9.66792 14.33M14.3363 14.3363L9.66602 9.66602" stroke="#535353" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+
+                            </td>
+                            <td class="px-6 py-4">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 12C21 7.02908 16.9709 3 12 3C7.02908 3 3 7.02908 3 12C3 16.9699 7.02908 21 12 21C16.9709 21 21 16.9699 21 12Z" stroke="#535353" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M8.53516 12.0003L10.845 14.3091L15.4627 9.69141" stroke="#535353" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </td>
+                        </tr>
+
+                        <tr class="border-t border-borderColor">
+                            <td class="px-6 py-4 font-Inter font-normal text-base leading-6 text-primaryColor">Integrations</td>
+                            <td class="px-6 py-4">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 12C21 7.02908 16.9709 3 12 3C7.02908 3 3 7.02908 3 12C3 16.9699 7.02908 21 12 21C16.9709 21 21 16.9699 21 12Z" stroke="#535353" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M14.3304 9.66744L9.66792 14.33M14.3363 14.3363L9.66602 9.66602" stroke="#535353" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+
+                            </td>
+                            <td class="px-6 py-4">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 12C21 7.02908 16.9709 3 12 3C7.02908 3 3 7.02908 3 12C3 16.9699 7.02908 21 12 21C16.9709 21 21 16.9699 21 12Z" stroke="#535353" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M14.3304 9.66744L9.66792 14.33M14.3363 14.3363L9.66602 9.66602" stroke="#535353" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+
+                            </td>
+                            <td class="px-6 py-4">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 12C21 7.02908 16.9709 3 12 3C7.02908 3 3 7.02908 3 12C3 16.9699 7.02908 21 12 21C16.9709 21 21 16.9699 21 12Z" stroke="#535353" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M8.53516 12.0003L10.845 14.3091L15.4627 9.69141" stroke="#535353" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>    
+        </div>
+    </section>
+    <!-- Plans Area End Here -->
+
+    <!-- Clients Area Start Here -->
+    <section class="lg:mt-[150px] md:mt-[100px] mt-10">
+        <div class="xl:w-[1280px] w-auto mx-auto xl:px-0 px-[18px]">
+            <div
+                data-aos="fade-down"
+                data-aos-duration="1000"
+                data-aos-offset="20"
+                data-aos-once="true"
+            class="">
+                <h1 class="lg:w-844 w-full mx-auto font-InterTight text-center font-normal md:text-60xl text-40xl leading-[48px] md:leading-64 text-primaryColor">Loved by Clients</h1>
+                <p class="font-InterTight font-normal text-base leading-7 text-secondaryColor text-center lg:w-408 w-full mx-auto pt-5">Hear what our clients have to say and how our work made a difference for their businesses.</p>
+            </div>
+
+            <div
+                data-aos="fade-down"
+                data-aos-duration="1000"
+                data-aos-offset="20"
+                data-aos-once="true"
+            class="flex xl:flex-row fex-col justify-between flex-wrap items-start gap-x-7 xl:gap-y-0 gap-y-7 lg:mt-[60px] mt-10">
+                <div class="xl:w-408 w-full bg-white rounded-xl xl:mt-7">
+                    <div class="p-7">
+                        <svg width="116" height="20" viewBox="0 0 116 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.9317 11.934C14.7159 12.1432 14.6167 12.4457 14.6659 12.7423L15.4067 16.8423C15.4692 17.1898 15.3226 17.5415 15.0317 17.7423C14.7467 17.9507 14.3676 17.9757 14.0567 17.809L10.3659 15.884C10.2376 15.8157 10.0951 15.779 9.94925 15.7748H9.72341C9.64508 15.7865 9.56841 15.8115 9.49841 15.8498L5.80675 17.784C5.62425 17.8757 5.41758 17.9082 5.21508 17.8757C4.72175 17.7823 4.39258 17.3123 4.47341 16.8165L5.21508 12.7165C5.26425 12.4173 5.16508 12.1132 4.94925 11.9007L1.94008 8.98398C1.68841 8.73982 1.60091 8.37315 1.71591 8.04232C1.82758 7.71232 2.11258 7.47148 2.45675 7.41732L6.59841 6.81648C6.91341 6.78398 7.19008 6.59232 7.33175 6.30898L9.15674 2.56732C9.20008 2.48398 9.25591 2.40732 9.32341 2.34232L9.39841 2.28398C9.43758 2.24065 9.48258 2.20482 9.53258 2.17565L9.62341 2.14232L9.76508 2.08398H10.1159C10.4292 2.11648 10.7051 2.30398 10.8492 2.58398L12.6984 6.30898C12.8317 6.58148 13.0909 6.77065 13.3901 6.81648L17.5317 7.41732C17.8817 7.46732 18.1742 7.70898 18.2901 8.04232C18.3992 8.37648 18.3051 8.74315 18.0484 8.98398L14.9317 11.934Z" fill="black"/>
+                            <path d="M38.9317 11.934C38.7159 12.1432 38.6167 12.4457 38.6659 12.7423L39.4067 16.8423C39.4692 17.1898 39.3226 17.5415 39.0317 17.7423C38.7467 17.9507 38.3676 17.9757 38.0567 17.809L34.3659 15.884C34.2376 15.8157 34.0951 15.779 33.9492 15.7748H33.7234C33.6451 15.7865 33.5684 15.8115 33.4984 15.8498L29.8067 17.784C29.6242 17.8757 29.4176 17.9082 29.2151 17.8757C28.7217 17.7823 28.3926 17.3123 28.4734 16.8165L29.2151 12.7165C29.2642 12.4173 29.1651 12.1132 28.9492 11.9007L25.9401 8.98398C25.6884 8.73982 25.6009 8.37315 25.7159 8.04232C25.8276 7.71232 26.1126 7.47148 26.4567 7.41732L30.5984 6.81648C30.9134 6.78398 31.1901 6.59232 31.3317 6.30898L33.1567 2.56732C33.2001 2.48398 33.2559 2.40732 33.3234 2.34232L33.3984 2.28398C33.4376 2.24065 33.4826 2.20482 33.5326 2.17565L33.6234 2.14232L33.7651 2.08398H34.1159C34.4292 2.11648 34.7051 2.30398 34.8492 2.58398L36.6984 6.30898C36.8317 6.58148 37.0909 6.77065 37.3901 6.81648L41.5317 7.41732C41.8817 7.46732 42.1742 7.70898 42.2901 8.04232C42.3992 8.37648 42.3051 8.74315 42.0484 8.98398L38.9317 11.934Z" fill="black"/>
+                            <path d="M62.9317 11.934C62.7159 12.1432 62.6167 12.4457 62.6659 12.7423L63.4067 16.8423C63.4692 17.1898 63.3226 17.5415 63.0317 17.7423C62.7467 17.9507 62.3676 17.9757 62.0567 17.809L58.3659 15.884C58.2376 15.8157 58.0951 15.779 57.9492 15.7748H57.7234C57.6451 15.7865 57.5684 15.8115 57.4984 15.8498L53.8067 17.784C53.6242 17.8757 53.4176 17.9082 53.2151 17.8757C52.7217 17.7823 52.3926 17.3123 52.4734 16.8165L53.2151 12.7165C53.2642 12.4173 53.1651 12.1132 52.9492 11.9007L49.9401 8.98398C49.6884 8.73982 49.6009 8.37315 49.7159 8.04232C49.8276 7.71232 50.1126 7.47148 50.4567 7.41732L54.5984 6.81648C54.9134 6.78398 55.1901 6.59232 55.3317 6.30898L57.1567 2.56732C57.2001 2.48398 57.2559 2.40732 57.3234 2.34232L57.3984 2.28398C57.4376 2.24065 57.4826 2.20482 57.5326 2.17565L57.6234 2.14232L57.7651 2.08398H58.1159C58.4292 2.11648 58.7051 2.30398 58.8492 2.58398L60.6984 6.30898C60.8317 6.58148 61.0909 6.77065 61.3901 6.81648L65.5317 7.41732C65.8817 7.46732 66.1742 7.70898 66.2901 8.04232C66.3992 8.37648 66.3051 8.74315 66.0484 8.98398L62.9317 11.934Z" fill="black"/>
+                            <path d="M86.9317 11.934C86.7159 12.1432 86.6167 12.4457 86.6659 12.7423L87.4067 16.8423C87.4692 17.1898 87.3226 17.5415 87.0317 17.7423C86.7467 17.9507 86.3676 17.9757 86.0567 17.809L82.3659 15.884C82.2376 15.8157 82.0951 15.779 81.9492 15.7748H81.7234C81.6451 15.7865 81.5684 15.8115 81.4984 15.8498L77.8067 17.784C77.6242 17.8757 77.4176 17.9082 77.2151 17.8757C76.7217 17.7823 76.3926 17.3123 76.4734 16.8165L77.2151 12.7165C77.2642 12.4173 77.1651 12.1132 76.9492 11.9007L73.9401 8.98398C73.6884 8.73982 73.6009 8.37315 73.7159 8.04232C73.8276 7.71232 74.1126 7.47148 74.4567 7.41732L78.5984 6.81648C78.9134 6.78398 79.1901 6.59232 79.3317 6.30898L81.1567 2.56732C81.2001 2.48398 81.2559 2.40732 81.3234 2.34232L81.3984 2.28398C81.4376 2.24065 81.4826 2.20482 81.5326 2.17565L81.6234 2.14232L81.7651 2.08398H82.1159C82.4292 2.11648 82.7051 2.30398 82.8492 2.58398L84.6984 6.30898C84.8317 6.58148 85.0909 6.77065 85.3901 6.81648L89.5317 7.41732C89.8817 7.46732 90.1742 7.70898 90.2901 8.04232C90.3992 8.37648 90.3051 8.74315 90.0484 8.98398L86.9317 11.934Z" fill="black"/>
+                            <path d="M110.932 11.934C110.716 12.1432 110.617 12.4457 110.666 12.7423L111.407 16.8423C111.469 17.1898 111.323 17.5415 111.032 17.7423C110.747 17.9507 110.368 17.9757 110.057 17.809L106.366 15.884C106.238 15.8157 106.095 15.779 105.949 15.7748H105.724C105.645 15.7865 105.569 15.8115 105.499 15.8498L101.807 17.784C101.624 17.8757 101.418 17.9082 101.215 17.8757C100.722 17.7823 100.393 17.3123 100.474 16.8165L101.215 12.7165C101.264 12.4173 101.165 12.1132 100.949 11.9007L97.9403 8.98398C97.6887 8.73982 97.6012 8.37315 97.7162 8.04232C97.8278 7.71232 98.1128 7.47148 98.457 7.41732L102.599 6.81648C102.914 6.78398 103.19 6.59232 103.332 6.30898L105.157 2.56732C105.2 2.48398 105.256 2.40732 105.324 2.34232L105.399 2.28398C105.438 2.24065 105.483 2.20482 105.533 2.17565L105.624 2.14232L105.765 2.08398H106.116C106.429 2.11648 106.705 2.30398 106.849 2.58398L108.699 6.30898C108.832 6.58148 109.091 6.77065 109.39 6.81648L113.532 7.41732C113.882 7.46732 114.174 7.70898 114.29 8.04232C114.399 8.37648 114.305 8.74315 114.049 8.98398L110.932 11.934Z" fill="black"/>
+                        </svg>
+                        <p class="font-InterTight font-normal text-base leading-6 text-secondaryColor pt-2">"They delivered exactly what we envisioned — and then some. Our conversions have doubled since launch!"</p>
+                        <hr class="bg-borderColor w-full h-[1px] mt-12"/>
+                        <div class="mt-6 flex gap-4 items-center">
+                            <img src="assets/img/homePage/clients/img-1.svg" alt="">
+                            <div>
+                                <h4 class="font-InterTight font-normal text-primaryColor text-base leading-6">Sarah Taylor</h4>
+                                <p class="font-InterTight font-normal text-xs leading-4 text-secondaryColor pt-1">Founder of FinPro</p>
+                            </div>
+                                
+                        </div>
+                    </div>
+                </div>
+
+                <div class="xl:w-408 w-full bg-white rounded-xl">
+                    <div class="p-7">
+                        <svg width="116" height="20" viewBox="0 0 116 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.9317 11.934C14.7159 12.1432 14.6167 12.4457 14.6659 12.7423L15.4067 16.8423C15.4692 17.1898 15.3226 17.5415 15.0317 17.7423C14.7467 17.9507 14.3676 17.9757 14.0567 17.809L10.3659 15.884C10.2376 15.8157 10.0951 15.779 9.94925 15.7748H9.72341C9.64508 15.7865 9.56841 15.8115 9.49841 15.8498L5.80675 17.784C5.62425 17.8757 5.41758 17.9082 5.21508 17.8757C4.72175 17.7823 4.39258 17.3123 4.47341 16.8165L5.21508 12.7165C5.26425 12.4173 5.16508 12.1132 4.94925 11.9007L1.94008 8.98398C1.68841 8.73982 1.60091 8.37315 1.71591 8.04232C1.82758 7.71232 2.11258 7.47148 2.45675 7.41732L6.59841 6.81648C6.91341 6.78398 7.19008 6.59232 7.33175 6.30898L9.15674 2.56732C9.20008 2.48398 9.25591 2.40732 9.32341 2.34232L9.39841 2.28398C9.43758 2.24065 9.48258 2.20482 9.53258 2.17565L9.62341 2.14232L9.76508 2.08398H10.1159C10.4292 2.11648 10.7051 2.30398 10.8492 2.58398L12.6984 6.30898C12.8317 6.58148 13.0909 6.77065 13.3901 6.81648L17.5317 7.41732C17.8817 7.46732 18.1742 7.70898 18.2901 8.04232C18.3992 8.37648 18.3051 8.74315 18.0484 8.98398L14.9317 11.934Z" fill="black"/>
+                            <path d="M38.9317 11.934C38.7159 12.1432 38.6167 12.4457 38.6659 12.7423L39.4067 16.8423C39.4692 17.1898 39.3226 17.5415 39.0317 17.7423C38.7467 17.9507 38.3676 17.9757 38.0567 17.809L34.3659 15.884C34.2376 15.8157 34.0951 15.779 33.9492 15.7748H33.7234C33.6451 15.7865 33.5684 15.8115 33.4984 15.8498L29.8067 17.784C29.6242 17.8757 29.4176 17.9082 29.2151 17.8757C28.7217 17.7823 28.3926 17.3123 28.4734 16.8165L29.2151 12.7165C29.2642 12.4173 29.1651 12.1132 28.9492 11.9007L25.9401 8.98398C25.6884 8.73982 25.6009 8.37315 25.7159 8.04232C25.8276 7.71232 26.1126 7.47148 26.4567 7.41732L30.5984 6.81648C30.9134 6.78398 31.1901 6.59232 31.3317 6.30898L33.1567 2.56732C33.2001 2.48398 33.2559 2.40732 33.3234 2.34232L33.3984 2.28398C33.4376 2.24065 33.4826 2.20482 33.5326 2.17565L33.6234 2.14232L33.7651 2.08398H34.1159C34.4292 2.11648 34.7051 2.30398 34.8492 2.58398L36.6984 6.30898C36.8317 6.58148 37.0909 6.77065 37.3901 6.81648L41.5317 7.41732C41.8817 7.46732 42.1742 7.70898 42.2901 8.04232C42.3992 8.37648 42.3051 8.74315 42.0484 8.98398L38.9317 11.934Z" fill="black"/>
+                            <path d="M62.9317 11.934C62.7159 12.1432 62.6167 12.4457 62.6659 12.7423L63.4067 16.8423C63.4692 17.1898 63.3226 17.5415 63.0317 17.7423C62.7467 17.9507 62.3676 17.9757 62.0567 17.809L58.3659 15.884C58.2376 15.8157 58.0951 15.779 57.9492 15.7748H57.7234C57.6451 15.7865 57.5684 15.8115 57.4984 15.8498L53.8067 17.784C53.6242 17.8757 53.4176 17.9082 53.2151 17.8757C52.7217 17.7823 52.3926 17.3123 52.4734 16.8165L53.2151 12.7165C53.2642 12.4173 53.1651 12.1132 52.9492 11.9007L49.9401 8.98398C49.6884 8.73982 49.6009 8.37315 49.7159 8.04232C49.8276 7.71232 50.1126 7.47148 50.4567 7.41732L54.5984 6.81648C54.9134 6.78398 55.1901 6.59232 55.3317 6.30898L57.1567 2.56732C57.2001 2.48398 57.2559 2.40732 57.3234 2.34232L57.3984 2.28398C57.4376 2.24065 57.4826 2.20482 57.5326 2.17565L57.6234 2.14232L57.7651 2.08398H58.1159C58.4292 2.11648 58.7051 2.30398 58.8492 2.58398L60.6984 6.30898C60.8317 6.58148 61.0909 6.77065 61.3901 6.81648L65.5317 7.41732C65.8817 7.46732 66.1742 7.70898 66.2901 8.04232C66.3992 8.37648 66.3051 8.74315 66.0484 8.98398L62.9317 11.934Z" fill="black"/>
+                            <path d="M86.9317 11.934C86.7159 12.1432 86.6167 12.4457 86.6659 12.7423L87.4067 16.8423C87.4692 17.1898 87.3226 17.5415 87.0317 17.7423C86.7467 17.9507 86.3676 17.9757 86.0567 17.809L82.3659 15.884C82.2376 15.8157 82.0951 15.779 81.9492 15.7748H81.7234C81.6451 15.7865 81.5684 15.8115 81.4984 15.8498L77.8067 17.784C77.6242 17.8757 77.4176 17.9082 77.2151 17.8757C76.7217 17.7823 76.3926 17.3123 76.4734 16.8165L77.2151 12.7165C77.2642 12.4173 77.1651 12.1132 76.9492 11.9007L73.9401 8.98398C73.6884 8.73982 73.6009 8.37315 73.7159 8.04232C73.8276 7.71232 74.1126 7.47148 74.4567 7.41732L78.5984 6.81648C78.9134 6.78398 79.1901 6.59232 79.3317 6.30898L81.1567 2.56732C81.2001 2.48398 81.2559 2.40732 81.3234 2.34232L81.3984 2.28398C81.4376 2.24065 81.4826 2.20482 81.5326 2.17565L81.6234 2.14232L81.7651 2.08398H82.1159C82.4292 2.11648 82.7051 2.30398 82.8492 2.58398L84.6984 6.30898C84.8317 6.58148 85.0909 6.77065 85.3901 6.81648L89.5317 7.41732C89.8817 7.46732 90.1742 7.70898 90.2901 8.04232C90.3992 8.37648 90.3051 8.74315 90.0484 8.98398L86.9317 11.934Z" fill="black"/>
+                            <path d="M110.932 11.934C110.716 12.1432 110.617 12.4457 110.666 12.7423L111.407 16.8423C111.469 17.1898 111.323 17.5415 111.032 17.7423C110.747 17.9507 110.368 17.9757 110.057 17.809L106.366 15.884C106.238 15.8157 106.095 15.779 105.949 15.7748H105.724C105.645 15.7865 105.569 15.8115 105.499 15.8498L101.807 17.784C101.624 17.8757 101.418 17.9082 101.215 17.8757C100.722 17.7823 100.393 17.3123 100.474 16.8165L101.215 12.7165C101.264 12.4173 101.165 12.1132 100.949 11.9007L97.9403 8.98398C97.6887 8.73982 97.6012 8.37315 97.7162 8.04232C97.8278 7.71232 98.1128 7.47148 98.457 7.41732L102.599 6.81648C102.914 6.78398 103.19 6.59232 103.332 6.30898L105.157 2.56732C105.2 2.48398 105.256 2.40732 105.324 2.34232L105.399 2.28398C105.438 2.24065 105.483 2.20482 105.533 2.17565L105.624 2.14232L105.765 2.08398H106.116C106.429 2.11648 106.705 2.30398 106.849 2.58398L108.699 6.30898C108.832 6.58148 109.091 6.77065 109.39 6.81648L113.532 7.41732C113.882 7.46732 114.174 7.70898 114.29 8.04232C114.399 8.37648 114.305 8.74315 114.049 8.98398L110.932 11.934Z" fill="black"/>
+                        </svg>
+                        <p class="font-InterTight font-normal text-base leading-6 text-secondaryColor pt-2">"They delivered exactly what we envisioned — and then some. Our conversions have doubled since launch!"</p>
+                        <hr class="bg-borderColor w-full h-[1px] mt-12"/>
+                        <div class="mt-6 flex gap-4 items-center">
+                            <img src="assets/img/homePage/clients/img-2.svg" alt="">
+                            <div>
+                                <h4 class="font-InterTight font-normal text-primaryColor text-base leading-6">Sarah Taylor</h4>
+                                <p class="font-InterTight font-normal text-xs leading-4 text-secondaryColor pt-1">Founder of FinPro</p>
+                            </div>
+                                
+                        </div>
+                    </div>
+                </div>
+                <div class="xl:w-408 w-full bg-white rounded-xl xl:mt-7">
+                    <div class="p-7">
+                        <svg width="116" height="20" viewBox="0 0 116 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.9317 11.934C14.7159 12.1432 14.6167 12.4457 14.6659 12.7423L15.4067 16.8423C15.4692 17.1898 15.3226 17.5415 15.0317 17.7423C14.7467 17.9507 14.3676 17.9757 14.0567 17.809L10.3659 15.884C10.2376 15.8157 10.0951 15.779 9.94925 15.7748H9.72341C9.64508 15.7865 9.56841 15.8115 9.49841 15.8498L5.80675 17.784C5.62425 17.8757 5.41758 17.9082 5.21508 17.8757C4.72175 17.7823 4.39258 17.3123 4.47341 16.8165L5.21508 12.7165C5.26425 12.4173 5.16508 12.1132 4.94925 11.9007L1.94008 8.98398C1.68841 8.73982 1.60091 8.37315 1.71591 8.04232C1.82758 7.71232 2.11258 7.47148 2.45675 7.41732L6.59841 6.81648C6.91341 6.78398 7.19008 6.59232 7.33175 6.30898L9.15674 2.56732C9.20008 2.48398 9.25591 2.40732 9.32341 2.34232L9.39841 2.28398C9.43758 2.24065 9.48258 2.20482 9.53258 2.17565L9.62341 2.14232L9.76508 2.08398H10.1159C10.4292 2.11648 10.7051 2.30398 10.8492 2.58398L12.6984 6.30898C12.8317 6.58148 13.0909 6.77065 13.3901 6.81648L17.5317 7.41732C17.8817 7.46732 18.1742 7.70898 18.2901 8.04232C18.3992 8.37648 18.3051 8.74315 18.0484 8.98398L14.9317 11.934Z" fill="black"/>
+                            <path d="M38.9317 11.934C38.7159 12.1432 38.6167 12.4457 38.6659 12.7423L39.4067 16.8423C39.4692 17.1898 39.3226 17.5415 39.0317 17.7423C38.7467 17.9507 38.3676 17.9757 38.0567 17.809L34.3659 15.884C34.2376 15.8157 34.0951 15.779 33.9492 15.7748H33.7234C33.6451 15.7865 33.5684 15.8115 33.4984 15.8498L29.8067 17.784C29.6242 17.8757 29.4176 17.9082 29.2151 17.8757C28.7217 17.7823 28.3926 17.3123 28.4734 16.8165L29.2151 12.7165C29.2642 12.4173 29.1651 12.1132 28.9492 11.9007L25.9401 8.98398C25.6884 8.73982 25.6009 8.37315 25.7159 8.04232C25.8276 7.71232 26.1126 7.47148 26.4567 7.41732L30.5984 6.81648C30.9134 6.78398 31.1901 6.59232 31.3317 6.30898L33.1567 2.56732C33.2001 2.48398 33.2559 2.40732 33.3234 2.34232L33.3984 2.28398C33.4376 2.24065 33.4826 2.20482 33.5326 2.17565L33.6234 2.14232L33.7651 2.08398H34.1159C34.4292 2.11648 34.7051 2.30398 34.8492 2.58398L36.6984 6.30898C36.8317 6.58148 37.0909 6.77065 37.3901 6.81648L41.5317 7.41732C41.8817 7.46732 42.1742 7.70898 42.2901 8.04232C42.3992 8.37648 42.3051 8.74315 42.0484 8.98398L38.9317 11.934Z" fill="black"/>
+                            <path d="M62.9317 11.934C62.7159 12.1432 62.6167 12.4457 62.6659 12.7423L63.4067 16.8423C63.4692 17.1898 63.3226 17.5415 63.0317 17.7423C62.7467 17.9507 62.3676 17.9757 62.0567 17.809L58.3659 15.884C58.2376 15.8157 58.0951 15.779 57.9492 15.7748H57.7234C57.6451 15.7865 57.5684 15.8115 57.4984 15.8498L53.8067 17.784C53.6242 17.8757 53.4176 17.9082 53.2151 17.8757C52.7217 17.7823 52.3926 17.3123 52.4734 16.8165L53.2151 12.7165C53.2642 12.4173 53.1651 12.1132 52.9492 11.9007L49.9401 8.98398C49.6884 8.73982 49.6009 8.37315 49.7159 8.04232C49.8276 7.71232 50.1126 7.47148 50.4567 7.41732L54.5984 6.81648C54.9134 6.78398 55.1901 6.59232 55.3317 6.30898L57.1567 2.56732C57.2001 2.48398 57.2559 2.40732 57.3234 2.34232L57.3984 2.28398C57.4376 2.24065 57.4826 2.20482 57.5326 2.17565L57.6234 2.14232L57.7651 2.08398H58.1159C58.4292 2.11648 58.7051 2.30398 58.8492 2.58398L60.6984 6.30898C60.8317 6.58148 61.0909 6.77065 61.3901 6.81648L65.5317 7.41732C65.8817 7.46732 66.1742 7.70898 66.2901 8.04232C66.3992 8.37648 66.3051 8.74315 66.0484 8.98398L62.9317 11.934Z" fill="black"/>
+                            <path d="M86.9317 11.934C86.7159 12.1432 86.6167 12.4457 86.6659 12.7423L87.4067 16.8423C87.4692 17.1898 87.3226 17.5415 87.0317 17.7423C86.7467 17.9507 86.3676 17.9757 86.0567 17.809L82.3659 15.884C82.2376 15.8157 82.0951 15.779 81.9492 15.7748H81.7234C81.6451 15.7865 81.5684 15.8115 81.4984 15.8498L77.8067 17.784C77.6242 17.8757 77.4176 17.9082 77.2151 17.8757C76.7217 17.7823 76.3926 17.3123 76.4734 16.8165L77.2151 12.7165C77.2642 12.4173 77.1651 12.1132 76.9492 11.9007L73.9401 8.98398C73.6884 8.73982 73.6009 8.37315 73.7159 8.04232C73.8276 7.71232 74.1126 7.47148 74.4567 7.41732L78.5984 6.81648C78.9134 6.78398 79.1901 6.59232 79.3317 6.30898L81.1567 2.56732C81.2001 2.48398 81.2559 2.40732 81.3234 2.34232L81.3984 2.28398C81.4376 2.24065 81.4826 2.20482 81.5326 2.17565L81.6234 2.14232L81.7651 2.08398H82.1159C82.4292 2.11648 82.7051 2.30398 82.8492 2.58398L84.6984 6.30898C84.8317 6.58148 85.0909 6.77065 85.3901 6.81648L89.5317 7.41732C89.8817 7.46732 90.1742 7.70898 90.2901 8.04232C90.3992 8.37648 90.3051 8.74315 90.0484 8.98398L86.9317 11.934Z" fill="black"/>
+                            <path d="M110.932 11.934C110.716 12.1432 110.617 12.4457 110.666 12.7423L111.407 16.8423C111.469 17.1898 111.323 17.5415 111.032 17.7423C110.747 17.9507 110.368 17.9757 110.057 17.809L106.366 15.884C106.238 15.8157 106.095 15.779 105.949 15.7748H105.724C105.645 15.7865 105.569 15.8115 105.499 15.8498L101.807 17.784C101.624 17.8757 101.418 17.9082 101.215 17.8757C100.722 17.7823 100.393 17.3123 100.474 16.8165L101.215 12.7165C101.264 12.4173 101.165 12.1132 100.949 11.9007L97.9403 8.98398C97.6887 8.73982 97.6012 8.37315 97.7162 8.04232C97.8278 7.71232 98.1128 7.47148 98.457 7.41732L102.599 6.81648C102.914 6.78398 103.19 6.59232 103.332 6.30898L105.157 2.56732C105.2 2.48398 105.256 2.40732 105.324 2.34232L105.399 2.28398C105.438 2.24065 105.483 2.20482 105.533 2.17565L105.624 2.14232L105.765 2.08398H106.116C106.429 2.11648 106.705 2.30398 106.849 2.58398L108.699 6.30898C108.832 6.58148 109.091 6.77065 109.39 6.81648L113.532 7.41732C113.882 7.46732 114.174 7.70898 114.29 8.04232C114.399 8.37648 114.305 8.74315 114.049 8.98398L110.932 11.934Z" fill="black"/>
+                        </svg>
+                        <p class="font-InterTight font-normal text-base leading-6 text-secondaryColor pt-2">"They delivered exactly what we envisioned — and then some. Our conversions have doubled since launch!"</p>
+                        <hr class="bg-borderColor w-full h-[1px] mt-12"/>
+                        <div class="mt-6 flex gap-4 items-center">
+                            <img src="assets/img/homePage/clients/img-3.svg" alt="">
+                            <div>
+                                <h4 class="font-InterTight font-normal text-primaryColor text-base leading-6">Sarah Taylor</h4>
+                                <p class="font-InterTight font-normal text-xs leading-4 text-secondaryColor pt-1">Founder of FinPro</p>
+                            </div>
+                                
+                        </div>
+                    </div>
+                </div>
+
+                <div class="xl:w-408 w-full bg-white rounded-xl xl:mt-7">
+                    <div class="p-7">
+                        <svg width="116" height="20" viewBox="0 0 116 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.9317 11.934C14.7159 12.1432 14.6167 12.4457 14.6659 12.7423L15.4067 16.8423C15.4692 17.1898 15.3226 17.5415 15.0317 17.7423C14.7467 17.9507 14.3676 17.9757 14.0567 17.809L10.3659 15.884C10.2376 15.8157 10.0951 15.779 9.94925 15.7748H9.72341C9.64508 15.7865 9.56841 15.8115 9.49841 15.8498L5.80675 17.784C5.62425 17.8757 5.41758 17.9082 5.21508 17.8757C4.72175 17.7823 4.39258 17.3123 4.47341 16.8165L5.21508 12.7165C5.26425 12.4173 5.16508 12.1132 4.94925 11.9007L1.94008 8.98398C1.68841 8.73982 1.60091 8.37315 1.71591 8.04232C1.82758 7.71232 2.11258 7.47148 2.45675 7.41732L6.59841 6.81648C6.91341 6.78398 7.19008 6.59232 7.33175 6.30898L9.15674 2.56732C9.20008 2.48398 9.25591 2.40732 9.32341 2.34232L9.39841 2.28398C9.43758 2.24065 9.48258 2.20482 9.53258 2.17565L9.62341 2.14232L9.76508 2.08398H10.1159C10.4292 2.11648 10.7051 2.30398 10.8492 2.58398L12.6984 6.30898C12.8317 6.58148 13.0909 6.77065 13.3901 6.81648L17.5317 7.41732C17.8817 7.46732 18.1742 7.70898 18.2901 8.04232C18.3992 8.37648 18.3051 8.74315 18.0484 8.98398L14.9317 11.934Z" fill="black"/>
+                            <path d="M38.9317 11.934C38.7159 12.1432 38.6167 12.4457 38.6659 12.7423L39.4067 16.8423C39.4692 17.1898 39.3226 17.5415 39.0317 17.7423C38.7467 17.9507 38.3676 17.9757 38.0567 17.809L34.3659 15.884C34.2376 15.8157 34.0951 15.779 33.9492 15.7748H33.7234C33.6451 15.7865 33.5684 15.8115 33.4984 15.8498L29.8067 17.784C29.6242 17.8757 29.4176 17.9082 29.2151 17.8757C28.7217 17.7823 28.3926 17.3123 28.4734 16.8165L29.2151 12.7165C29.2642 12.4173 29.1651 12.1132 28.9492 11.9007L25.9401 8.98398C25.6884 8.73982 25.6009 8.37315 25.7159 8.04232C25.8276 7.71232 26.1126 7.47148 26.4567 7.41732L30.5984 6.81648C30.9134 6.78398 31.1901 6.59232 31.3317 6.30898L33.1567 2.56732C33.2001 2.48398 33.2559 2.40732 33.3234 2.34232L33.3984 2.28398C33.4376 2.24065 33.4826 2.20482 33.5326 2.17565L33.6234 2.14232L33.7651 2.08398H34.1159C34.4292 2.11648 34.7051 2.30398 34.8492 2.58398L36.6984 6.30898C36.8317 6.58148 37.0909 6.77065 37.3901 6.81648L41.5317 7.41732C41.8817 7.46732 42.1742 7.70898 42.2901 8.04232C42.3992 8.37648 42.3051 8.74315 42.0484 8.98398L38.9317 11.934Z" fill="black"/>
+                            <path d="M62.9317 11.934C62.7159 12.1432 62.6167 12.4457 62.6659 12.7423L63.4067 16.8423C63.4692 17.1898 63.3226 17.5415 63.0317 17.7423C62.7467 17.9507 62.3676 17.9757 62.0567 17.809L58.3659 15.884C58.2376 15.8157 58.0951 15.779 57.9492 15.7748H57.7234C57.6451 15.7865 57.5684 15.8115 57.4984 15.8498L53.8067 17.784C53.6242 17.8757 53.4176 17.9082 53.2151 17.8757C52.7217 17.7823 52.3926 17.3123 52.4734 16.8165L53.2151 12.7165C53.2642 12.4173 53.1651 12.1132 52.9492 11.9007L49.9401 8.98398C49.6884 8.73982 49.6009 8.37315 49.7159 8.04232C49.8276 7.71232 50.1126 7.47148 50.4567 7.41732L54.5984 6.81648C54.9134 6.78398 55.1901 6.59232 55.3317 6.30898L57.1567 2.56732C57.2001 2.48398 57.2559 2.40732 57.3234 2.34232L57.3984 2.28398C57.4376 2.24065 57.4826 2.20482 57.5326 2.17565L57.6234 2.14232L57.7651 2.08398H58.1159C58.4292 2.11648 58.7051 2.30398 58.8492 2.58398L60.6984 6.30898C60.8317 6.58148 61.0909 6.77065 61.3901 6.81648L65.5317 7.41732C65.8817 7.46732 66.1742 7.70898 66.2901 8.04232C66.3992 8.37648 66.3051 8.74315 66.0484 8.98398L62.9317 11.934Z" fill="black"/>
+                            <path d="M86.9317 11.934C86.7159 12.1432 86.6167 12.4457 86.6659 12.7423L87.4067 16.8423C87.4692 17.1898 87.3226 17.5415 87.0317 17.7423C86.7467 17.9507 86.3676 17.9757 86.0567 17.809L82.3659 15.884C82.2376 15.8157 82.0951 15.779 81.9492 15.7748H81.7234C81.6451 15.7865 81.5684 15.8115 81.4984 15.8498L77.8067 17.784C77.6242 17.8757 77.4176 17.9082 77.2151 17.8757C76.7217 17.7823 76.3926 17.3123 76.4734 16.8165L77.2151 12.7165C77.2642 12.4173 77.1651 12.1132 76.9492 11.9007L73.9401 8.98398C73.6884 8.73982 73.6009 8.37315 73.7159 8.04232C73.8276 7.71232 74.1126 7.47148 74.4567 7.41732L78.5984 6.81648C78.9134 6.78398 79.1901 6.59232 79.3317 6.30898L81.1567 2.56732C81.2001 2.48398 81.2559 2.40732 81.3234 2.34232L81.3984 2.28398C81.4376 2.24065 81.4826 2.20482 81.5326 2.17565L81.6234 2.14232L81.7651 2.08398H82.1159C82.4292 2.11648 82.7051 2.30398 82.8492 2.58398L84.6984 6.30898C84.8317 6.58148 85.0909 6.77065 85.3901 6.81648L89.5317 7.41732C89.8817 7.46732 90.1742 7.70898 90.2901 8.04232C90.3992 8.37648 90.3051 8.74315 90.0484 8.98398L86.9317 11.934Z" fill="black"/>
+                            <path d="M110.932 11.934C110.716 12.1432 110.617 12.4457 110.666 12.7423L111.407 16.8423C111.469 17.1898 111.323 17.5415 111.032 17.7423C110.747 17.9507 110.368 17.9757 110.057 17.809L106.366 15.884C106.238 15.8157 106.095 15.779 105.949 15.7748H105.724C105.645 15.7865 105.569 15.8115 105.499 15.8498L101.807 17.784C101.624 17.8757 101.418 17.9082 101.215 17.8757C100.722 17.7823 100.393 17.3123 100.474 16.8165L101.215 12.7165C101.264 12.4173 101.165 12.1132 100.949 11.9007L97.9403 8.98398C97.6887 8.73982 97.6012 8.37315 97.7162 8.04232C97.8278 7.71232 98.1128 7.47148 98.457 7.41732L102.599 6.81648C102.914 6.78398 103.19 6.59232 103.332 6.30898L105.157 2.56732C105.2 2.48398 105.256 2.40732 105.324 2.34232L105.399 2.28398C105.438 2.24065 105.483 2.20482 105.533 2.17565L105.624 2.14232L105.765 2.08398H106.116C106.429 2.11648 106.705 2.30398 106.849 2.58398L108.699 6.30898C108.832 6.58148 109.091 6.77065 109.39 6.81648L113.532 7.41732C113.882 7.46732 114.174 7.70898 114.29 8.04232C114.399 8.37648 114.305 8.74315 114.049 8.98398L110.932 11.934Z" fill="black"/>
+                        </svg>
+                        <p class="font-InterTight font-normal text-base leading-6 text-secondaryColor pt-2">"They delivered exactly what we envisioned — and then some. Our conversions have doubled since launch!"</p>
+                        <hr class="bg-borderColor w-full h-[1px] mt-12"/>
+                        <div class="mt-6 flex gap-4 items-center">
+                            <img src="assets/img/homePage/clients/img-4.svg" alt="">
+                            <div>
+                                <h4 class="font-InterTight font-normal text-primaryColor text-base leading-6">Sarah Taylor</h4>
+                                <p class="font-InterTight font-normal text-xs leading-4 text-secondaryColor pt-1">Founder of FinPro</p>
+                            </div>
+                                
+                        </div>
+                    </div>
+                </div>
+                <div class="xl:w-408 w-full bg-white rounded-xl">
+                    <div class="p-7">
+                        <svg width="116" height="20" viewBox="0 0 116 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.9317 11.934C14.7159 12.1432 14.6167 12.4457 14.6659 12.7423L15.4067 16.8423C15.4692 17.1898 15.3226 17.5415 15.0317 17.7423C14.7467 17.9507 14.3676 17.9757 14.0567 17.809L10.3659 15.884C10.2376 15.8157 10.0951 15.779 9.94925 15.7748H9.72341C9.64508 15.7865 9.56841 15.8115 9.49841 15.8498L5.80675 17.784C5.62425 17.8757 5.41758 17.9082 5.21508 17.8757C4.72175 17.7823 4.39258 17.3123 4.47341 16.8165L5.21508 12.7165C5.26425 12.4173 5.16508 12.1132 4.94925 11.9007L1.94008 8.98398C1.68841 8.73982 1.60091 8.37315 1.71591 8.04232C1.82758 7.71232 2.11258 7.47148 2.45675 7.41732L6.59841 6.81648C6.91341 6.78398 7.19008 6.59232 7.33175 6.30898L9.15674 2.56732C9.20008 2.48398 9.25591 2.40732 9.32341 2.34232L9.39841 2.28398C9.43758 2.24065 9.48258 2.20482 9.53258 2.17565L9.62341 2.14232L9.76508 2.08398H10.1159C10.4292 2.11648 10.7051 2.30398 10.8492 2.58398L12.6984 6.30898C12.8317 6.58148 13.0909 6.77065 13.3901 6.81648L17.5317 7.41732C17.8817 7.46732 18.1742 7.70898 18.2901 8.04232C18.3992 8.37648 18.3051 8.74315 18.0484 8.98398L14.9317 11.934Z" fill="black"/>
+                            <path d="M38.9317 11.934C38.7159 12.1432 38.6167 12.4457 38.6659 12.7423L39.4067 16.8423C39.4692 17.1898 39.3226 17.5415 39.0317 17.7423C38.7467 17.9507 38.3676 17.9757 38.0567 17.809L34.3659 15.884C34.2376 15.8157 34.0951 15.779 33.9492 15.7748H33.7234C33.6451 15.7865 33.5684 15.8115 33.4984 15.8498L29.8067 17.784C29.6242 17.8757 29.4176 17.9082 29.2151 17.8757C28.7217 17.7823 28.3926 17.3123 28.4734 16.8165L29.2151 12.7165C29.2642 12.4173 29.1651 12.1132 28.9492 11.9007L25.9401 8.98398C25.6884 8.73982 25.6009 8.37315 25.7159 8.04232C25.8276 7.71232 26.1126 7.47148 26.4567 7.41732L30.5984 6.81648C30.9134 6.78398 31.1901 6.59232 31.3317 6.30898L33.1567 2.56732C33.2001 2.48398 33.2559 2.40732 33.3234 2.34232L33.3984 2.28398C33.4376 2.24065 33.4826 2.20482 33.5326 2.17565L33.6234 2.14232L33.7651 2.08398H34.1159C34.4292 2.11648 34.7051 2.30398 34.8492 2.58398L36.6984 6.30898C36.8317 6.58148 37.0909 6.77065 37.3901 6.81648L41.5317 7.41732C41.8817 7.46732 42.1742 7.70898 42.2901 8.04232C42.3992 8.37648 42.3051 8.74315 42.0484 8.98398L38.9317 11.934Z" fill="black"/>
+                            <path d="M62.9317 11.934C62.7159 12.1432 62.6167 12.4457 62.6659 12.7423L63.4067 16.8423C63.4692 17.1898 63.3226 17.5415 63.0317 17.7423C62.7467 17.9507 62.3676 17.9757 62.0567 17.809L58.3659 15.884C58.2376 15.8157 58.0951 15.779 57.9492 15.7748H57.7234C57.6451 15.7865 57.5684 15.8115 57.4984 15.8498L53.8067 17.784C53.6242 17.8757 53.4176 17.9082 53.2151 17.8757C52.7217 17.7823 52.3926 17.3123 52.4734 16.8165L53.2151 12.7165C53.2642 12.4173 53.1651 12.1132 52.9492 11.9007L49.9401 8.98398C49.6884 8.73982 49.6009 8.37315 49.7159 8.04232C49.8276 7.71232 50.1126 7.47148 50.4567 7.41732L54.5984 6.81648C54.9134 6.78398 55.1901 6.59232 55.3317 6.30898L57.1567 2.56732C57.2001 2.48398 57.2559 2.40732 57.3234 2.34232L57.3984 2.28398C57.4376 2.24065 57.4826 2.20482 57.5326 2.17565L57.6234 2.14232L57.7651 2.08398H58.1159C58.4292 2.11648 58.7051 2.30398 58.8492 2.58398L60.6984 6.30898C60.8317 6.58148 61.0909 6.77065 61.3901 6.81648L65.5317 7.41732C65.8817 7.46732 66.1742 7.70898 66.2901 8.04232C66.3992 8.37648 66.3051 8.74315 66.0484 8.98398L62.9317 11.934Z" fill="black"/>
+                            <path d="M86.9317 11.934C86.7159 12.1432 86.6167 12.4457 86.6659 12.7423L87.4067 16.8423C87.4692 17.1898 87.3226 17.5415 87.0317 17.7423C86.7467 17.9507 86.3676 17.9757 86.0567 17.809L82.3659 15.884C82.2376 15.8157 82.0951 15.779 81.9492 15.7748H81.7234C81.6451 15.7865 81.5684 15.8115 81.4984 15.8498L77.8067 17.784C77.6242 17.8757 77.4176 17.9082 77.2151 17.8757C76.7217 17.7823 76.3926 17.3123 76.4734 16.8165L77.2151 12.7165C77.2642 12.4173 77.1651 12.1132 76.9492 11.9007L73.9401 8.98398C73.6884 8.73982 73.6009 8.37315 73.7159 8.04232C73.8276 7.71232 74.1126 7.47148 74.4567 7.41732L78.5984 6.81648C78.9134 6.78398 79.1901 6.59232 79.3317 6.30898L81.1567 2.56732C81.2001 2.48398 81.2559 2.40732 81.3234 2.34232L81.3984 2.28398C81.4376 2.24065 81.4826 2.20482 81.5326 2.17565L81.6234 2.14232L81.7651 2.08398H82.1159C82.4292 2.11648 82.7051 2.30398 82.8492 2.58398L84.6984 6.30898C84.8317 6.58148 85.0909 6.77065 85.3901 6.81648L89.5317 7.41732C89.8817 7.46732 90.1742 7.70898 90.2901 8.04232C90.3992 8.37648 90.3051 8.74315 90.0484 8.98398L86.9317 11.934Z" fill="black"/>
+                            <path d="M110.932 11.934C110.716 12.1432 110.617 12.4457 110.666 12.7423L111.407 16.8423C111.469 17.1898 111.323 17.5415 111.032 17.7423C110.747 17.9507 110.368 17.9757 110.057 17.809L106.366 15.884C106.238 15.8157 106.095 15.779 105.949 15.7748H105.724C105.645 15.7865 105.569 15.8115 105.499 15.8498L101.807 17.784C101.624 17.8757 101.418 17.9082 101.215 17.8757C100.722 17.7823 100.393 17.3123 100.474 16.8165L101.215 12.7165C101.264 12.4173 101.165 12.1132 100.949 11.9007L97.9403 8.98398C97.6887 8.73982 97.6012 8.37315 97.7162 8.04232C97.8278 7.71232 98.1128 7.47148 98.457 7.41732L102.599 6.81648C102.914 6.78398 103.19 6.59232 103.332 6.30898L105.157 2.56732C105.2 2.48398 105.256 2.40732 105.324 2.34232L105.399 2.28398C105.438 2.24065 105.483 2.20482 105.533 2.17565L105.624 2.14232L105.765 2.08398H106.116C106.429 2.11648 106.705 2.30398 106.849 2.58398L108.699 6.30898C108.832 6.58148 109.091 6.77065 109.39 6.81648L113.532 7.41732C113.882 7.46732 114.174 7.70898 114.29 8.04232C114.399 8.37648 114.305 8.74315 114.049 8.98398L110.932 11.934Z" fill="black"/>
+                        </svg>
+                        <p class="font-InterTight font-normal text-base leading-6 text-secondaryColor pt-2">"They delivered exactly what we envisioned — and then some. Our conversions have doubled since launch!"</p>
+                        <hr class="bg-borderColor w-full h-[1px] mt-12"/>
+                        <div class="mt-6 flex gap-4 items-center">
+                            <img src="assets/img/homePage/clients/img-5.svg" alt="">
+                            <div>
+                                <h4 class="font-InterTight font-normal text-primaryColor text-base leading-6">Sarah Taylor</h4>
+                                <p class="font-InterTight font-normal text-xs leading-4 text-secondaryColor pt-1">Founder of FinPro</p>
+                            </div>
+                                
+                        </div>
+                    </div>
+                </div>
+
+                <div class="xl:w-408 w-full bg-white rounded-xl xl:mt-7">
+                    <div class="p-7">
+                        <svg width="116" height="20" viewBox="0 0 116 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.9317 11.934C14.7159 12.1432 14.6167 12.4457 14.6659 12.7423L15.4067 16.8423C15.4692 17.1898 15.3226 17.5415 15.0317 17.7423C14.7467 17.9507 14.3676 17.9757 14.0567 17.809L10.3659 15.884C10.2376 15.8157 10.0951 15.779 9.94925 15.7748H9.72341C9.64508 15.7865 9.56841 15.8115 9.49841 15.8498L5.80675 17.784C5.62425 17.8757 5.41758 17.9082 5.21508 17.8757C4.72175 17.7823 4.39258 17.3123 4.47341 16.8165L5.21508 12.7165C5.26425 12.4173 5.16508 12.1132 4.94925 11.9007L1.94008 8.98398C1.68841 8.73982 1.60091 8.37315 1.71591 8.04232C1.82758 7.71232 2.11258 7.47148 2.45675 7.41732L6.59841 6.81648C6.91341 6.78398 7.19008 6.59232 7.33175 6.30898L9.15674 2.56732C9.20008 2.48398 9.25591 2.40732 9.32341 2.34232L9.39841 2.28398C9.43758 2.24065 9.48258 2.20482 9.53258 2.17565L9.62341 2.14232L9.76508 2.08398H10.1159C10.4292 2.11648 10.7051 2.30398 10.8492 2.58398L12.6984 6.30898C12.8317 6.58148 13.0909 6.77065 13.3901 6.81648L17.5317 7.41732C17.8817 7.46732 18.1742 7.70898 18.2901 8.04232C18.3992 8.37648 18.3051 8.74315 18.0484 8.98398L14.9317 11.934Z" fill="black"/>
+                            <path d="M38.9317 11.934C38.7159 12.1432 38.6167 12.4457 38.6659 12.7423L39.4067 16.8423C39.4692 17.1898 39.3226 17.5415 39.0317 17.7423C38.7467 17.9507 38.3676 17.9757 38.0567 17.809L34.3659 15.884C34.2376 15.8157 34.0951 15.779 33.9492 15.7748H33.7234C33.6451 15.7865 33.5684 15.8115 33.4984 15.8498L29.8067 17.784C29.6242 17.8757 29.4176 17.9082 29.2151 17.8757C28.7217 17.7823 28.3926 17.3123 28.4734 16.8165L29.2151 12.7165C29.2642 12.4173 29.1651 12.1132 28.9492 11.9007L25.9401 8.98398C25.6884 8.73982 25.6009 8.37315 25.7159 8.04232C25.8276 7.71232 26.1126 7.47148 26.4567 7.41732L30.5984 6.81648C30.9134 6.78398 31.1901 6.59232 31.3317 6.30898L33.1567 2.56732C33.2001 2.48398 33.2559 2.40732 33.3234 2.34232L33.3984 2.28398C33.4376 2.24065 33.4826 2.20482 33.5326 2.17565L33.6234 2.14232L33.7651 2.08398H34.1159C34.4292 2.11648 34.7051 2.30398 34.8492 2.58398L36.6984 6.30898C36.8317 6.58148 37.0909 6.77065 37.3901 6.81648L41.5317 7.41732C41.8817 7.46732 42.1742 7.70898 42.2901 8.04232C42.3992 8.37648 42.3051 8.74315 42.0484 8.98398L38.9317 11.934Z" fill="black"/>
+                            <path d="M62.9317 11.934C62.7159 12.1432 62.6167 12.4457 62.6659 12.7423L63.4067 16.8423C63.4692 17.1898 63.3226 17.5415 63.0317 17.7423C62.7467 17.9507 62.3676 17.9757 62.0567 17.809L58.3659 15.884C58.2376 15.8157 58.0951 15.779 57.9492 15.7748H57.7234C57.6451 15.7865 57.5684 15.8115 57.4984 15.8498L53.8067 17.784C53.6242 17.8757 53.4176 17.9082 53.2151 17.8757C52.7217 17.7823 52.3926 17.3123 52.4734 16.8165L53.2151 12.7165C53.2642 12.4173 53.1651 12.1132 52.9492 11.9007L49.9401 8.98398C49.6884 8.73982 49.6009 8.37315 49.7159 8.04232C49.8276 7.71232 50.1126 7.47148 50.4567 7.41732L54.5984 6.81648C54.9134 6.78398 55.1901 6.59232 55.3317 6.30898L57.1567 2.56732C57.2001 2.48398 57.2559 2.40732 57.3234 2.34232L57.3984 2.28398C57.4376 2.24065 57.4826 2.20482 57.5326 2.17565L57.6234 2.14232L57.7651 2.08398H58.1159C58.4292 2.11648 58.7051 2.30398 58.8492 2.58398L60.6984 6.30898C60.8317 6.58148 61.0909 6.77065 61.3901 6.81648L65.5317 7.41732C65.8817 7.46732 66.1742 7.70898 66.2901 8.04232C66.3992 8.37648 66.3051 8.74315 66.0484 8.98398L62.9317 11.934Z" fill="black"/>
+                            <path d="M86.9317 11.934C86.7159 12.1432 86.6167 12.4457 86.6659 12.7423L87.4067 16.8423C87.4692 17.1898 87.3226 17.5415 87.0317 17.7423C86.7467 17.9507 86.3676 17.9757 86.0567 17.809L82.3659 15.884C82.2376 15.8157 82.0951 15.779 81.9492 15.7748H81.7234C81.6451 15.7865 81.5684 15.8115 81.4984 15.8498L77.8067 17.784C77.6242 17.8757 77.4176 17.9082 77.2151 17.8757C76.7217 17.7823 76.3926 17.3123 76.4734 16.8165L77.2151 12.7165C77.2642 12.4173 77.1651 12.1132 76.9492 11.9007L73.9401 8.98398C73.6884 8.73982 73.6009 8.37315 73.7159 8.04232C73.8276 7.71232 74.1126 7.47148 74.4567 7.41732L78.5984 6.81648C78.9134 6.78398 79.1901 6.59232 79.3317 6.30898L81.1567 2.56732C81.2001 2.48398 81.2559 2.40732 81.3234 2.34232L81.3984 2.28398C81.4376 2.24065 81.4826 2.20482 81.5326 2.17565L81.6234 2.14232L81.7651 2.08398H82.1159C82.4292 2.11648 82.7051 2.30398 82.8492 2.58398L84.6984 6.30898C84.8317 6.58148 85.0909 6.77065 85.3901 6.81648L89.5317 7.41732C89.8817 7.46732 90.1742 7.70898 90.2901 8.04232C90.3992 8.37648 90.3051 8.74315 90.0484 8.98398L86.9317 11.934Z" fill="black"/>
+                            <path d="M110.932 11.934C110.716 12.1432 110.617 12.4457 110.666 12.7423L111.407 16.8423C111.469 17.1898 111.323 17.5415 111.032 17.7423C110.747 17.9507 110.368 17.9757 110.057 17.809L106.366 15.884C106.238 15.8157 106.095 15.779 105.949 15.7748H105.724C105.645 15.7865 105.569 15.8115 105.499 15.8498L101.807 17.784C101.624 17.8757 101.418 17.9082 101.215 17.8757C100.722 17.7823 100.393 17.3123 100.474 16.8165L101.215 12.7165C101.264 12.4173 101.165 12.1132 100.949 11.9007L97.9403 8.98398C97.6887 8.73982 97.6012 8.37315 97.7162 8.04232C97.8278 7.71232 98.1128 7.47148 98.457 7.41732L102.599 6.81648C102.914 6.78398 103.19 6.59232 103.332 6.30898L105.157 2.56732C105.2 2.48398 105.256 2.40732 105.324 2.34232L105.399 2.28398C105.438 2.24065 105.483 2.20482 105.533 2.17565L105.624 2.14232L105.765 2.08398H106.116C106.429 2.11648 106.705 2.30398 106.849 2.58398L108.699 6.30898C108.832 6.58148 109.091 6.77065 109.39 6.81648L113.532 7.41732C113.882 7.46732 114.174 7.70898 114.29 8.04232C114.399 8.37648 114.305 8.74315 114.049 8.98398L110.932 11.934Z" fill="black"/>
+                        </svg>
+                        <p class="font-InterTight font-normal text-base leading-6 text-secondaryColor pt-2">"They delivered exactly what we envisioned — and then some. Our conversions have doubled since launch!"</p>
+                        <hr class="bg-borderColor w-full h-[1px] mt-12"/>
+                        <div class="mt-6 flex gap-4 items-center">
+                            <img src="assets/img/homePage/clients/img-6.svg" alt="">
+                            <div>
+                                <h4 class="font-InterTight font-normal text-primaryColor text-base leading-6">Sarah Taylor</h4>
+                                <p class="font-InterTight font-normal text-xs leading-4 text-secondaryColor pt-1">Founder of FinPro</p>
+                            </div>
+                                
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Clients Area End Here -->
+
+    <!-- Promo Area Start Here -->
+    <section class="lg:mt-[150px] md:mt-20 mt-10">
+        <div
+                data-aos="fade-down"
+                data-aos-duration="1000"
+                data-aos-offset="20"
+                data-aos-once="true"
+        class="xl:w-[1280px] w-auto mx-auto xl:px-0 px-[18px]">
+            <div class="bg-[#EAEAEA] bg-center bg-no-repeat w-full rounded-xl" style="background-image: url('assets/img/pattern.svg');">
+                <div class="lg:py-20 lg:px-20 py-10 px-5">
+                    <div class="w-full max-w-[656px] mx-auto lg:px-4">
+                        <h3 class="font-InterTight font-normal text-center md:text-60xl text-40xl leading-[48px] md:leading-64 text-primaryColor">Let’s Create Something Great Together</h3>
+                        <p class="font-InterTight text-center font-normal text-base leading-7 text-secondaryColor pt-5">Ready to elevate your brand? Reach out today to start your next project with us.</p>
+                        <div class="md:mt-[60px] mt-10 text-center flex md:flex-row flex-col justify-center gap-4 md:w-[294px] w-full mx-auto">
+                            <a href="contact.html" class="md:inline-block block text-center font-InterTight font-medium text-base leading-6 text-white bg-primaryColor py-2.5 px-5 rounded-full hover:bg-white hover:text-primaryColor transition ease-in-out duration-500 hover:transition hover:ease-in-out hover:duration-500">Contact Us</a>
+                            <a href="pricing.html" class="md:inline-block block text-center font-InterTight font-medium text-base leading-6 text-primaryColor bg-white py-2.5 px-5 rounded-full hover:bg-primaryColor hover:text-white transition ease-in-out duration-500 hover:transition hover:ease-in-out hover:duration-500">Book a Call</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Promo Area End Here -->
+
+    <!-- Footer Area Start Here -->
+    <section class="lg:mt-[150px] md:mt-20 mt-10 bg-black">
+        <div class="xl:w-[1280px] w-auto mx-auto xl:px-0 px-[18px]">
+            <div
+                data-aos="fade-down"
+                data-aos-duration="1000"
+                data-aos-offset="20"
+                data-aos-once="true"
+            class="md:py-20 py-10">
+                <div class="flex lg:flex-row flex-col justify-between items-start xl:gap-y-0 gap-y-10">
+                    <div class="lg:w-[288px] w-full ">
+                        <span class="font-InterTight font-normal text-sm leading-6 text-white text-opacity-70">Let's start a conversation</span>
+                        <a href="#" class="font-InterTight font-normal text-xl leading-8 text-[#EDECE4] pt-3 block">hi.nexivo@gmail.com</a>
+                        <a href="#" class="font-InterTight font-normal text-xl leading-8 text-[#EDECE4] pt-3 block">+1 (123) 456 7890</a>
+                    </div>
+
+                    <div class="lg:w-[912px] w-full grid xl:grid-cols-4 md:grid-cols-3 grid-cols-1 xl:gap-y-0 gap-y-10">
+                        <div>
+                            <span class="font-InterTight font-normal text-sm leading-6 text-white text-opacity-70">Useful Link</span>
+                            <ul>
+                                <li class="group relative w-max">
+                                    <a href="index.html" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-3 block">Home</a>
+                                    <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[1px] bg-white group-hover:w-full"></span>
+                                </li>
+                                <li class="group relative w-max">
+                                    <a href="about.html" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-4 block">About Us</a>
+                                    <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[1px] bg-white group-hover:w-full"></span>
+                                </li>
+                                <li class="group relative w-max">
+                                    <a href="service.html" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-4 block">Services</a>
+                                    <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[1px] bg-white group-hover:w-full"></span>
+                                </li>
+                                <li class="group relative w-max">
+                                    <a href="works.html" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-4 block">Works</a>
+                                    <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[1px] bg-white group-hover:w-full"></span>
+                                </li>
+                                <li class="group relative w-max">
+                                    <a href="contact.html" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-4 block">Contact Us</a>
+                                    <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[1px] bg-white group-hover:w-full"></span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="">
+                            <span class="font-InterTight font-normal text-sm leading-6 text-white text-opacity-70">Based on</span>
+                            <ul>
+                                <li class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-3 block">New York, USA</li>
+                                <li class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-3">Dubai, UAE</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <span class="font-InterTight font-normal text-sm leading-6 text-white text-opacity-70">Follow us</span>
+                            <ul>
+                                <li><a href="#" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-3 block">LinkedIn</a></li>
+                                <li><a href="#" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-3 block">Twitter</a></li>
+                                <li><a href="#" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-3 block">Behance</a></li>
+                                <li><a href="#" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-3 block">Dribbble</a></li>
+                            </ul>
+                        </div>
+
+                       <div class="">
+                            <span class="font-InterTight font-normal text-sm leading-6 text-white text-opacity-70">Based on</span>
+                            <ul>
+                                <li class="group relative w-max">
+                                    <a href="terms.html" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-3 block">Terms & Conditions</a>
+                                    <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[1px] bg-white group-hover:w-full"></span>
+                                </li>
+                                <li class="group relative w-max">
+                                    <a href="policy.html" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-4 block">Privacy Policy</a>
+                                    <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[1px] bg-white group-hover:w-full"></span>
+                                </li>
+                            </ul>
+                       </div>
+                    </div>
+                </div>
+                <hr class="border border-white border-opacity-30 my-8"/>
+
+                <div class="flex md:flex-row flex-col justify-between items-start xl:gap-0 gap-2">
+                    <p class="font-InterTight font-normal text-base leading-7 text-white text-opacity-70">&copy; 2025 Company All rights reserved.</p>
+                    <a href="#" class="font-InterTight font-normal text-base leading-7 text-white text-opacity-70">Design @Figma</a>
+                </div>
+            </div>
+             <img
+                data-aos="zoom-in"
+                data-aos-duration="1000"
+                data-aos-offset="20"
+                data-aos-once="true"
+             class="w-full" src="assets/img/footer-logo.svg" alt="">
+        </div>
+       
+    </section>
+    <!-- Footer Area End Here -->
+
+    <script src="assets/js/alpine.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/aos_script.js"></script>
+</body>
+</html>

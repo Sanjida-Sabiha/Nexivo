@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="assets/img/icon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexivo || Blog Details Page</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+</head>
+<body class="bg-mainBanner">
+
+    <!-- Header Area Start Here -->
+    <header class="pt-7">
+        <div class="xl:w-[1280px] w-auto mx-auto xl:px-0 px-[18px]">
+            <nav class="p-2 bg-white rounded-full relative z-30">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <a href="index.html">
+                            <img class="w-[127px]" src="assets/img/logo.svg" alt="">
+                        </a>
+                    </div>
+                    <div class=" lg:block hidden">
+                        <ul class="flex items-center gap-10">
+                            <li class="group relative w-max">
+                                <a href="index.html" class="text-base font-InterTight font-normal leading-6 text-secondaryColor transition ease-in-out duration-500 hover:text-primaryColor hover:transition hover:ease-in-out hover:duration-500">Home</a>
+                                <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[2px] bg-primaryColor group-hover:w-full"></span>
+                            
+                            </li>
+                            <li class="group relative w-max">
+                                <a href="about.html" class="text-base font-InterTight font-normal leading-6 text-secondaryColor transition ease-in-out duration-500 hover:text-primaryColor hover:transition hover:ease-in-out hover:duration-500">About Us</a>
+                                <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[2px] bg-primaryColor group-hover:w-full"></span>
+                            </li>
+                            <li class="group relative w-max">
+                                <a href="service.html" class="text-base font-InterTight font-normal leading-6 text-secondaryColor transition ease-in-out duration-500 hover:text-primaryColor hover:transition hover:ease-in-out hover:duration-500">Services</a>
+                                <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[2px] bg-primaryColor group-hover:w-full"></span>
+                            </li>
+                            <li class="group relative w-max">
+                                <a href="works.html" class="text-base font-InterTight font-normal leading-6 text-secondaryColor transition ease-in-out duration-500 hover:text-primaryColor hover:transition hover:ease-in-out hover:duration-500">Works</a>
+                                <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[2px] bg-primaryColor group-hover:w-full"></span>
+                            </li>
+                            <li class="py-1.5 group flex items-center relative" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
+                                <a href="#" onclick="event.preventDefault()" class="inline-flex items-center text-base font-InterTight font-normal text-secondaryColor hover:text-primaryColor transition ease-in-out duration-500"
+                                    @click.prevent="open = !open" :class="{ 'text-LavenderIndigo': open }">
+                                    Pages
+                                    <svg :class="{ 'rotate-180': open }" class="ml-2 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" width="11" height="6" fill="none" viewBox="0 0 11 6">
+                                        <path d="M1.5 1L5.5 5L9.5 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+
+                                <!-- Dropdown content  -->
+                                <ul id="dropdown" class="absolute left-0 top-8 w-48 py-2 list-none bg-white rounded-md hidden z-10 group-hover:block border border-borderColor" :class="{ 'block': open, 'hidden': !open }">
+                                    <!-- Dropdown items -->
+                                    <li>
+                                        <a href="services-details.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Service Details Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="work-details.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Works details Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="blog.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Blog Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="blog-details.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Blog details Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="faq.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">FAQ</a>
+                                    </li>
+                                    <li>
+                                        <a href="pricing.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Pricing</a>
+                                    </li>
+                                    <li>
+                                        <a href="404.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">404 Page</a>
+                                    </li>
+                                </ul>
+                            </li>   
+                        </ul>
+                    </div>
+
+                    <!-- Menu button for mobile -->
+                    <div class="flex items-center lg:hidden sm:block">
+                        <button id="mobileMenuButton" class="focus:outline-none bg-primaryColor w-11 h-11 rounded-full flex justify-center items-center">
+                            <svg id="menuIcon" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="white">
+                                <path id="menuOpenIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                                <path id="menuCloseIcon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="lg:block hidden">
+                        <a href="contact.html" class="font-InterTight font-medium text-base leading-6 text-white bg-primaryColor py-2.5 px-5 rounded-full border border-primaryColor hover:border-borderColor hover:bg-transparent hover:text-primaryColor transition ease-in-out duration-500 hover:transition hover:ease-in-out hover:duration-500">Contact Us</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div id="mobileMenu" class="border border-borderColor bg-white shadow-btn hidden rounded-R_5 my-2 py-7 transition-height transition-all duration-1000 ease-in-out overflow-hidden absolute inset-x-0 top-[65px] z-50">
+                    <div class="">
+                        <ul class="dropdown flex flex-col gap-y-5 px-5">
+                            <li class="group relative w-max">
+                                <a href="index.html" class="text-lg font-InterTight font-normal leading-8 text-secondaryColor transition ease-in-out duration-500 hover:text-primaryColor hover:transition hover:ease-in-out hover:duration-500">Home</a>
+                                <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[2px] bg-primaryColor group-hover:w-full"></span>
+                            
+                            </li>
+                            <li class="group relative w-max">
+                                <a href="about.html" class="text-lg font-InterTight font-normal leading-8 text-secondaryColor transition ease-in-out duration-500 hover:text-primaryColor hover:transition hover:ease-in-out hover:duration-500">About Us</a>
+                                <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[2px] bg-primaryColor group-hover:w-full"></span>
+                            </li>
+                            <li class="group relative w-max">
+                                <a href="service.html" class="text-lg font-InterTight font-normal leading-8 text-secondaryColor transition ease-in-out duration-500 hover:text-primaryColor hover:transition hover:ease-in-out hover:duration-500">Services</a>
+                                <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[2px] bg-primaryColor group-hover:w-full"></span>
+                            </li>
+                            <li class="group relative w-max">
+                                <a href="works.html" class="text-lg font-InterTight font-normal leading-8 text-secondaryColor transition ease-in-out duration-500 hover:text-primaryColor hover:transition hover:ease-in-out hover:duration-500">works</a>
+                                <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[2px] bg-primaryColor group-hover:w-full"></span>
+                            </li>
+                            <li class=" group relative">
+                                <!-- Icon added here for the mobile menu -->
+                                <a href="javascript:void(0);" id="mobileFeaturesToggle" class=" pb-5 flex justify-between text-lg font-InterTight font-normal leading-8 text-primaryColor items-center">
+                                    Pages
+                                    <svg id="mobileDropdownIcon" class="ml-2 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" width="11" height="6" fill="none" viewBox="0 0 11 6">
+                                        <path d="M1.5 1L5.5 5L9.5 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                                <ul id="mobileDropdownMenu" class="hidden bg-bg mb-5 rounded-md shadow-2xl bg-white">
+                                    <!-- Dropdown items -->
+                                    <li>
+                                        <a href="services-details.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Service Details Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="work-details.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Works details Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="blog.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Blog Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="blog-details.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Blog details Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="faq.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">FAQ</a>
+                                    </li>
+                                    <li>
+                                        <a href="pricing.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Pricing</a>
+                                    </li>
+                                    <li>
+                                        <a href="404.html" class="text-base font-normal font-InterTight block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">404 Page</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="lg:hidden block text-center mt-5">
+                        <a href="contact.html" class="font-InterTight font-medium text-base leading-6 text-white bg-primaryColor py-2.5 px-5 rounded-full border border-primaryColor hover:border-borderColor hover:bg-transparent hover:text-primaryColor transition ease-in-out duration-500 hover:transition hover:ease-in-out hover:duration-500">Contact Us</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Header Area End Here -->
+
+    <!-- Banner Area Start Here -->
+    <section class="md:mt-[100px] mt-10">
+        <div class="xl:w-[1280px] w-auto mx-auto xl:px-0 px-[18px]">
+            <div
+                data-aos="fade-down"
+                data-aos-duration="1000"
+                data-aos-offset="20"
+                data-aos-once="true"
+            class="flex xl:flex-row flex-col justify-between items-start xl:gap-0 gap-10">
+                <div class="xl:w-[255px] w-auto flex justify-between items-center gap-5">
+                    <span class="font-InterTight font-normal text-base leading-6 text-primaryColor py-2.5 px-5 border border-borderColor rounded-[100px]">UI/UX Design</span>
+                    <span class="font-InterTight font-normal text-base leading-6 text-primaryColor">May 23, 2025</span>
+                </div>
+                <div class="xl:w-844 w-full">
+                    <h1 class="font-InterTight font-normal md:text-60xl text-40xl leading-[48px] md:leading-64 text-primaryColor">UI/UX Design Trends That Will Dominate the Design Industry</h1>
+                </div>
+            </div>
+            <img
+                data-aos="zoom-in"
+                data-aos-duration="1000"
+                data-aos-offset="20"
+                data-aos-once="true"
+            class="lg:mt-[60px] mt-10" src="assets/img/blogPage/blog-banner.png" alt="">
+        </div>
+    </section>
+    <!-- Banner Area End Here -->
+
+    <!-- Blog Details Area Start Here -->
+    <section class="mt-12">
+        <div class="xl:w-[1280px] w-auto mx-auto xl:px-0 px-[18px]">
+            <div
+                data-aos="fade-down"
+                data-aos-duration="1000"
+                data-aos-offset="20"
+                data-aos-once="true"
+            class="flex lg:flex-row flex-col-reverse justify-between items-start lg:gap-0 gap-10">
+                <div class="lg:w-356 w-full">
+                    <h4 class="font-InterTight font-medium text-lg leading-7 text-primaryColor">Author</h4>
+                    <div class="mt-3 flex gap-4 items-center">
+                        <img src="assets/img/homePage/clients/img-2.svg" alt="">
+                        <div>
+                            <h4 class="font-InterTight font-medium text-primaryColor text-base leading-6">Ben Stokes</h4>
+                            <p class="font-InterTight font-normal text-xs leading-4 text-secondaryColor pt-1">Copywriter</p>
+                        </div>     
+                    </div>
+
+                    <div class="mt-7">
+                        <h4 class="font-InterTight font-medium text-primaryColor text-base leading-6">Published</h4>
+                        <p class="font-InterTight font-normal text-xs leading-4 text-secondaryColor pt-1">Monday, September 23, 2024</p>
+                    </div>
+
+                    <div class="mt-7">
+                        <h4 class="font-InterTight font-medium text-primaryColor text-base leading-6">Share</h4>
+
+                        <div class="flex gap-2.5 mt-3.5">
+
+                            <a href="https://www.facebook.com/" target="_blank"  class="w-11 h-11 flex justify-center items-center group border border-borderColor rounded-full bg-transparent hover:bg-primaryColor hover:transition hover:ease-in-out hover:duration-500">
+                                <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.25128 10.1244L9.76483 6.867H6.55475V4.75312C6.55475 3.86212 7.00302 2.99306 8.44082 2.99306H9.9V0.219938C9.9 0.219938 8.57599 0 7.30976 0C4.66637 0 2.93857 1.56038 2.93857 4.38469V6.86756H0V10.125H2.93857V18H6.55475V10.125L9.25128 10.1244Z" fill="#121313" class="group-hover:fill-white"/>
+                                </svg>
+                            </a>
+
+                            <a href="#" target="_blank" class="w-11 h-11 flex justify-center items-center group border border-borderColor rounded-full bg-transparent hover:bg-primaryColor hover:transition hover:ease-in-out hover:duration-500">
+                                <svg class="" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.0438858 0L6.99348 9.92807L0 18H1.57395L7.69674 10.9329L12.6438 18H18L10.6594 7.5135L17.1689 0H15.5949L9.95613 6.50866L5.40011 0H0.0438858ZM2.3585 1.2387H4.81916L15.685 16.7611H13.2244L2.3585 1.2387Z" fill="#121313" class="group-hover:fill-white"/>
+                                </svg>
+                            </a>
+
+                            <a href="#" target="_blank" class="w-11 h-11 flex justify-center items-center group border border-borderColor rounded-full bg-transparent hover:bg-primaryColor hover:transition hover:ease-in-out hover:duration-500">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.00891 0.0118885C7.14776 0.211298 5.44301 0.883814 3.92203 2.02162C3.42546 2.39306 2.40496 3.41357 2.03351 3.91013C1.01692 5.26689 0.391324 6.71749 0.109806 8.3675C0.00423686 8.97746 -0.0348629 10.385 0.0355167 11.0224C0.215375 12.6958 0.762772 14.209 1.67771 15.5658L1.88102 15.8668L1.25152 17.728C0.907441 18.7524 0.629833 19.593 0.633743 19.5969C0.637653 19.6048 1.48612 19.3389 2.51835 19.0065C3.55058 18.6742 4.43033 18.4005 4.46943 18.4005C4.50853 18.4005 4.63365 18.4552 4.74313 18.5256C5.99432 19.3076 7.44101 19.8003 8.97763 19.9645C9.61495 20.0349 11.0225 19.9958 11.6325 19.8902C13.2825 19.6087 14.737 18.9831 16.0899 17.9665C16.5864 17.595 17.6069 16.5745 17.9784 16.078C19.0106 14.6977 19.6401 13.2159 19.9256 11.4994C20.0272 10.8816 20.0272 9.10649 19.9256 8.48871C19.6401 6.77223 19.0106 5.29035 17.9784 3.91013C17.6069 3.41357 16.5864 2.39306 16.0899 2.02162C14.737 1.00893 13.2903 0.383337 11.6325 0.097908C11.2532 0.0314388 10.96 0.0118885 10.1623 0.00407028C9.61495 -0.00374985 9.09493 0.000160217 9.00891 0.0118885ZM6.85842 4.65303C6.96008 4.69604 7.01873 4.76642 7.10866 4.94628C7.33544 5.39201 8.16826 7.44084 8.16826 7.55032C8.16826 7.73409 8.01577 7.97651 7.63651 8.41051C7.4371 8.63338 7.25333 8.85625 7.22987 8.89535C7.1243 9.09476 7.22596 9.36064 7.61696 9.91585C8.47324 11.1319 9.45073 11.9842 10.6824 12.5746C11.6599 13.0477 11.7811 13.0165 12.4106 12.1445C12.8641 11.515 13.044 11.3665 13.306 11.4251C13.5718 11.4838 15.8514 12.5942 15.9491 12.7154C16.0899 12.8835 15.9648 13.8063 15.738 14.2481C15.4134 14.8893 14.4086 15.4797 13.4936 15.5658C12.5435 15.6596 10.2796 14.8698 8.93853 13.9783C7.58177 13.0751 6.18591 11.5971 5.09893 9.91976C4.55154 9.07521 4.21919 8.09771 4.21919 7.33527C4.21919 6.51418 4.47334 5.8182 5.00118 5.19651C5.2436 4.90327 5.47038 4.74296 5.75581 4.65694C5.98259 4.58265 6.68638 4.58265 6.85842 4.65303Z" fill="#121313" class="group-hover:fill-white"/>
+                                </svg>
+                            </a>
+                            <a href="#" target="_blank" class="w-11 h-11 flex justify-center items-center group border border-borderColor rounded-full bg-transparent hover:bg-primaryColor hover:transition hover:ease-in-out hover:duration-500">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.88475 7.70209L2.73775 8.84959C0.42075 11.1677 0.42075 14.9464 2.73775 17.2645C5.04675 19.5745 8.8317 19.5825 11.1487 17.2645L12.2957 16.1169" stroke="#121313" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:stroke-white"/>
+                                    <path d="M16.115 12.298L17.2621 11.1505C19.579 8.8324 19.579 5.05362 17.2621 2.73555C14.9531 0.425486 11.1681 0.417483 8.85113 2.73555L7.7041 3.88308" stroke="#121313" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:stroke-white"/>
+                                    <path d="M12.6367 7.45197L7.4043 12.6867" stroke="#121313" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:stroke-white"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-844 w-full">
+                    <p class="font-InterTight font-normal text-base leading-6 text-secondaryColor ">As technology rapidly evolves, so does the way we interact with digital products. User Interface (UI) and User Experience (UX) design continue to be at the forefront of innovation, shaping how users engage with apps, websites, and software. Staying ahead of the curve is essential for designers, developers, and businesses aiming to deliver seamless, engaging, and future-proof experiences.
+                        <br/>
+                        <br/>
+                        Here are the top UI/UX design trends set to dominate the design industry in the coming year:
+                    </p>
+
+                    <div class="md:mt-12 mt-7">
+                        <h4 class="font-InterTight font-normal md:text-28xl text-24xl leading-32 md:leading-34 text-primaryColor ">AI-Powered Personalization</h4>
+                        <p class="font-InterTight font-normal text-base leading-6 text-secondaryColor pt-5">AI is transforming UI/UX design by enabling hyper-personalized experiences. Instead of a one-size-fits-all approach, platforms are adapting to user behaviors, preferences, and past interactions. From personalized dashboards to smart content suggestions, AI-driven design is making digital experiences smarter and more intuitive.</p>
+                        <div class="mt-5">
+                           <h4 class="font-InterTight font-normal text-base leading-6 text-primaryColor ">Why it matters:</h4>
+                            <p class="font-InterTight font-normal text-base leading-6 text-secondaryColor pt-2">Personalization improves user engagement, satisfaction, and retention.</p>
+                        </div>
+                    </div>
+
+                    <div class="md:mt-12 mt-7">
+                        <h4 class="font-InterTight font-normal md:text-28xl text-24xl leading-32 md:leading-34 text-primaryColor ">Dark Mode Evolution</h4>
+                        <p class="font-InterTight font-normal text-base leading-6 text-secondaryColor pt-5">Dark mode has moved beyond being a novelty and is now a standard feature across many apps and platforms. In 2025, we’ll see more creative and refined implementations—such as dynamic themes that adapt based on time of day or ambient light, and improved color schemes that maintain readability and visual hierarchy.</p>
+                        <div class="mt-5">
+                           <h4 class="font-InterTight font-normal text-base leading-6 text-primaryColor ">Why it matters:</h4>
+                            <p class="font-InterTight font-normal text-base leading-6 text-secondaryColor pt-2">Personalization improves user engagement, satisfaction, and retention.</p>
+                        </div>
+                    </div>
+
+                    <div class="md:mt-12 mt-7">
+                        <h4 class="font-InterTight font-normal md:text-28xl text-24xl leading-32 md:leading-34 text-primaryColor ">3D & Immersive Design</h4>
+                        <p class="font-InterTight font-normal text-base leading-6 text-secondaryColor pt-5">AI is transforming UI/UX design by enabling hyper-personalized experiences. Instead of a one-size-fits-all approach, platforms are adapting to user behaviors, preferences, and past interactions. From personalized dashboards to smart content suggestions, AI-driven design is making digital experiences smarter and more intuitive.</p>
+                        <div class="mt-5">
+                           <h4 class="font-InterTight font-normal text-base leading-6 text-primaryColor ">Why it matters:</h4>
+                            <p class="font-InterTight font-normal text-base leading-6 text-secondaryColor pt-2">Personalization improves user engagement, satisfaction, and retention.</p>
+                        </div>
+                    </div>
+
+                    <div class="md:mt-12 mt-7">
+                        <h4 class="font-InterTight font-normal md:text-28xl text-24xl leading-32 md:leading-34 text-primaryColor ">Micro interactions for Deeper Engagement</h4>
+                        <p class="font-InterTight font-normal text-base leading-6 text-secondaryColor pt-5">AI is transforming UI/UX design by enabling hyper-personalized experiences. Instead of a one-size-fits-all approach, platforms are adapting to user behaviors, preferences, and past interactions. From personalized dashboards to smart content suggestions, AI-driven design is making digital experiences smarter and more intuitive.</p>
+                        <div class="mt-5">
+                           <h4 class="font-InterTight font-normal text-base leading-6 text-primaryColor ">Why it matters:</h4>
+                            <p class="font-InterTight font-normal text-base leading-6 text-secondaryColor pt-2">Personalization improves user engagement, satisfaction, and retention.</p>
+                        </div>
+                    </div>
+
+                    <div class="md:mt-12 mt-7">
+                        <h4 class="font-InterTight font-normal md:text-28xl text-24xl leading-32 md:leading-34 text-primaryColor ">Voice User Interface (VUI)</h4>
+                        <p class="font-InterTight font-normal text-base leading-6 text-secondaryColor pt-5">AI is transforming UI/UX design by enabling hyper-personalized experiences. Instead of a one-size-fits-all approach, platforms are adapting to user behaviors, preferences, and past interactions. From personalized dashboards to smart content suggestions, AI-driven design is making digital experiences smarter and more intuitive.</p>
+                        <div class="mt-5">
+                           <h4 class="font-InterTight font-normal text-base leading-6 text-primaryColor ">Why it matters:</h4>
+                            <p class="font-InterTight font-normal text-base leading-6 text-secondaryColor pt-2">Personalization improves user engagement, satisfaction, and retention.</p>
+                        </div>
+                    </div>
+
+                    <div class="md:mt-12 mt-7">
+                        <h4 class="font-InterTight font-normal md:text-28xl text-24xl leading-32 md:leading-34 text-primaryColor ">Neumorphism 2.0</h4>
+                        <p class="font-InterTight font-normal text-base leading-6 text-secondaryColor pt-5">AI is transforming UI/UX design by enabling hyper-personalized experiences. Instead of a one-size-fits-all approach, platforms are adapting to user behaviors, preferences, and past interactions. From personalized dashboards to smart content suggestions, AI-driven design is making digital experiences smarter and more intuitive.</p>
+                        <div class="mt-5">
+                           <h4 class="font-InterTight font-normal text-base leading-6 text-primaryColor ">Why it matters:</h4>
+                            <p class="font-InterTight font-normal text-base leading-6 text-secondaryColor pt-2">Personalization improves user engagement, satisfaction, and retention.</p>
+                        </div>
+                    </div>
+
+                    <div class="md:mt-12 mt-7">
+                        <h4 class="font-InterTight font-normal md:text-28xl text-24xl leading-32 md:leading-34 text-primaryColor ">Skeuomorphic Design Revival</h4>
+                        <p class="font-InterTight font-normal text-base leading-6 text-secondaryColor pt-5">AI is transforming UI/UX design by enabling hyper-personalized experiences. Instead of a one-size-fits-all approach, platforms are adapting to user behaviors, preferences, and past interactions. From personalized dashboards to smart content suggestions, AI-driven design is making digital experiences smarter and more intuitive.</p>
+                        <div class="mt-5">
+                           <h4 class="font-InterTight font-normal text-base leading-6 text-primaryColor ">Why it matters:</h4>
+                            <p class="font-InterTight font-normal text-base leading-6 text-secondaryColor pt-2">Personalization improves user engagement, satisfaction, and retention.</p>
+                        </div>
+                    </div>
+
+                    <div class="md:mt-12 mt-7">
+                        <h4 class="font-InterTight font-normal md:text-28xl text-24xl leading-32 md:leading-34 text-primaryColor ">Asymmetrical Layouts and Broken Grids</h4>
+                        <p class="font-InterTight font-normal text-base leading-6 text-secondaryColor pt-5">AI is transforming UI/UX design by enabling hyper-personalized experiences. Instead of a one-size-fits-all approach, platforms are adapting to user behaviors, preferences, and past interactions. From personalized dashboards to smart content suggestions, AI-driven design is making digital experiences smarter and more intuitive.</p>
+                        <div class="mt-5">
+                           <h4 class="font-InterTight font-normal text-base leading-6 text-primaryColor ">Why it matters:</h4>
+                            <p class="font-InterTight font-normal text-base leading-6 text-secondaryColor pt-2">Personalization improves user engagement, satisfaction, and retention.</p>
+                        </div>
+                    </div>
+
+                    <div class="md:mt-12 mt-7">
+                        <h4 class="font-InterTight font-normal md:text-28xl text-24xl leading-32 md:leading-34 text-primaryColor ">Sustainable and Ethical Design</h4>
+                        <p class="font-InterTight font-normal text-base leading-6 text-secondaryColor pt-5">AI is transforming UI/UX design by enabling hyper-personalized experiences. Instead of a one-size-fits-all approach, platforms are adapting to user behaviors, preferences, and past interactions. From personalized dashboards to smart content suggestions, AI-driven design is making digital experiences smarter and more intuitive.</p>
+                        <div class="mt-5">
+                           <h4 class="font-InterTight font-normal text-base leading-6 text-primaryColor ">Why it matters:</h4>
+                            <p class="font-InterTight font-normal text-base leading-6 text-secondaryColor pt-2">Personalization improves user engagement, satisfaction, and retention.</p>
+                        </div>
+                    </div>
+
+                    <div class="md:mt-12 mt-7">
+                        <h4 class="font-InterTight font-normal md:text-28xl text-24xl leading-32 md:leading-34 text-primaryColor ">Augmented Reality (AR) Integration</h4>
+                        <p class="font-InterTight font-normal text-base leading-6 text-secondaryColor pt-5">AI is transforming UI/UX design by enabling hyper-personalized experiences. Instead of a one-size-fits-all approach, platforms are adapting to user behaviors, preferences, and past interactions. From personalized dashboards to smart content suggestions, AI-driven design is making digital experiences smarter and more intuitive.</p>
+                        <div class="mt-5">
+                           <h4 class="font-InterTight font-normal text-base leading-6 text-primaryColor ">Why it matters:</h4>
+                            <p class="font-InterTight font-normal text-base leading-6 text-secondaryColor pt-2">Personalization improves user engagement, satisfaction, and retention.</p>
+                        </div>
+                    </div>
+
+                    <div class="md:mt-12 mt-7">
+                        <h4 class="font-InterTight font-normal md:text-28xl text-24xl leading-32 md:leading-34 text-primaryColor ">Final Thoughts</h4>
+                        <p class="font-InterTight font-normal text-base leading-6 text-secondaryColor pt-5">UI/UX design is more than just aesthetics—it's about creating intuitive, impactful, and inclusive digital experiences. By staying ahead of these trends, designers can not only future-proof their work but also create meaningful experiences that resonate with users in an ever-evolving digital landscape.
+                            <br/>
+                            <br/>
+                        Whether you're a startup, an enterprise, or a freelance designer, embracing these trends will keep you relevant and competitive in the coming year.</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Details Area End Here -->
+
+
+    <!-- Blog Area Start Here -->
+    <section class="lg:mt-[150px] md:mt-[100px] mt-10">
+        <div class="xl:w-[1280px] w-auto mx-auto xl:px-0 px-[18px]">
+            <div
+                data-aos="fade-down"
+                data-aos-duration="1000"
+                data-aos-offset="20"
+                data-aos-once="true"
+            class="flex md:justify-between justify-center items-center">
+                <h4 class="font-InterTight font-normal text-primaryColor lg:text-60xl text-30xl leading-[40px] lg:leading-64 md:text-left text-center">Tips, Trends & Resources</h4>
+
+                <a href="blog.html" class="group md:flex gap-3 items-center hidden">
+                    <span class="font-InterTight font-normal text-base leading-6 text-primaryColor">Browse All</span>
+                    <svg class="group-hover:transform group-hover:translate-x-3 transition ease-in-out duration-500 group-hover:transition group-hover:ease-in-out group-hover:duration-500" width="34" height="10" viewBox="0 0 34 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M29 1L33 5M33 5L29 9M33 5H1" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+
+            <div
+                data-aos="fade-down"
+                data-aos-duration="1000"
+                data-aos-offset="20"
+                data-aos-once="true"
+            class="grid xl:grid-cols-2 grid-cols-1 gap-7 lg:mt-[60px] mt-10">
+                <div class="flex md:flex-row flex-col justify-between gap-7">
+                    <img src="assets/img/blogPage/blog-10.png" alt="">
+                    <div class="xl:w-[299px] w-full">
+                        <h4 class="font-InterTight font-medium text-xl leading-7 text-primaryColor">Why Your Business Needs a Strong Brand Identity</h4>
+                        <p class="font-InterTight font-normal text-sm leading-5 text-secondaryColor pt-2">Explore how branding influences trust, loyalty, and conversion rates.</p>
+                        <a href="blog.html" class="group md:mt-[167px] mt-2 flex gap-3 items-center">
+                            <span class="font-InterTight font-medium text-base leading-6 text-primaryColor">Read More</span>
+                            <svg class="group-hover:transform group-hover:translate-x-3 transition ease-in-out duration-500 group-hover:transition group-hover:ease-in-out group-hover:duration-500" width="34" height="10" viewBox="0 0 34 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M29 1L33 5M33 5L29 9M33 5H1" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex md:flex-row flex-col justify-between gap-7">
+                    <img src="assets/img/blogPage/blog-13.png" alt="">
+                    <div class="xl:w-[299px] w-full">
+                        <h4 class="font-InterTight font-medium text-xl leading-7 text-primaryColor">Why Your Business Needs a Strong Brand Identity</h4>
+                        <p class="font-InterTight font-normal text-sm leading-5 text-secondaryColor pt-2">Explore how branding influences trust, loyalty, and conversion rates.</p>
+                        <a href="blog.html" class="group md:mt-[167px] mt-2 flex gap-3 items-center">
+                            <span class="font-InterTight font-medium text-base leading-6 text-primaryColor">Read More</span>
+                            <svg class="group-hover:transform group-hover:translate-x-3 transition ease-in-out duration-500 group-hover:transition group-hover:ease-in-out group-hover:duration-500" width="34" height="10" viewBox="0 0 34 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M29 1L33 5M33 5L29 9M33 5H1" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex md:flex-row flex-col justify-between gap-7">
+                    <img src="assets/img/blogPage/blog-12.png" alt="">
+                    <div class="xl:w-[299px] w-full">
+                        <h4 class="font-InterTight font-medium text-xl leading-7 text-primaryColor">Why Your Business Needs a Strong Brand Identity</h4>
+                        <p class="font-InterTight font-normal text-sm leading-5 text-secondaryColor pt-2">Explore how branding influences trust, loyalty, and conversion rates.</p>
+                        <a href="blog.html" class="group md:mt-[167px] mt-2 flex gap-3 items-center">
+                            <span class="font-InterTight font-medium text-base leading-6 text-primaryColor">Read More</span>
+                            <svg class="group-hover:transform group-hover:translate-x-3 transition ease-in-out duration-500 group-hover:transition group-hover:ease-in-out group-hover:duration-500" width="34" height="10" viewBox="0 0 34 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M29 1L33 5M33 5L29 9M33 5H1" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex md:flex-row flex-col justify-between gap-7">
+                    <img src="assets/img/blogPage/blog-11.png" alt="">
+                    <div class="xl:w-[299px] w-full">
+                        <h4 class="font-InterTight font-medium text-xl leading-7 text-primaryColor">Why Your Business Needs a Strong Brand Identity</h4>
+                        <p class="font-InterTight font-normal text-sm leading-5 text-secondaryColor pt-2">Explore how branding influences trust, loyalty, and conversion rates.</p>
+                        <a href="blog.html" class="group md:mt-[167px] mt-2 flex gap-3 items-center">
+                            <span class="font-InterTight font-medium text-base leading-6 text-primaryColor">Read More</span>
+                            <svg class="group-hover:transform group-hover:translate-x-3 transition ease-in-out duration-500 group-hover:transition group-hover:ease-in-out group-hover:duration-500" width="34" height="10" viewBox="0 0 34 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M29 1L33 5M33 5L29 9M33 5H1" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            <div>
+            <a
+                data-aos="fade-down"
+                data-aos-duration="1000"
+                data-aos-offset="20"
+                data-aos-once="true"
+            href="blog.html" class="group flex gap-3 items-center md:hidden w-full justify-center mt-2">
+                <span class="font-InterTight font-normal text-base leading-6 text-primaryColor">Browse All Blogs</span>
+                <svg class="group-hover:transform group-hover:translate-x-3 transition ease-in-out duration-500 group-hover:transition group-hover:ease-in-out group-hover:duration-500" width="34" height="10" viewBox="0 0 34 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M29 1L33 5M33 5L29 9M33 5H1" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+    <!-- Blog Area End Here -->
+
+    <!-- Footer Area Start Here -->
+    <section class="lg:mt-[150px] md:mt-20 mt-10 bg-black">
+        <div class="xl:w-[1280px] w-auto mx-auto xl:px-0 px-[18px]">
+            <div
+                data-aos="fade-down"
+                data-aos-duration="1000"
+                data-aos-offset="20"
+                data-aos-once="true"
+            class="md:py-20 py-10">
+                <div class="flex lg:flex-row flex-col justify-between items-start xl:gap-y-0 gap-y-10">
+                    <div class="lg:w-[288px] w-full ">
+                        <span class="font-InterTight font-normal text-sm leading-6 text-white text-opacity-70">Let's start a conversation</span>
+                        <a href="#" class="font-InterTight font-normal text-xl leading-8 text-[#EDECE4] pt-3 block">hi.nexivo@gmail.com</a>
+                        <a href="#" class="font-InterTight font-normal text-xl leading-8 text-[#EDECE4] pt-3 block">+1 (123) 456 7890</a>
+                    </div>
+
+                    <div class="lg:w-[912px] w-full grid xl:grid-cols-4 md:grid-cols-3 grid-cols-1 xl:gap-y-0 gap-y-10">
+                        <div>
+                            <span class="font-InterTight font-normal text-sm leading-6 text-white text-opacity-70">Useful Link</span>
+                            <ul>
+                                <li class="group relative w-max">
+                                    <a href="index.html" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-3 block">Home</a>
+                                    <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[1px] bg-white group-hover:w-full"></span>
+                                </li>
+                                <li class="group relative w-max">
+                                    <a href="about.html" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-4 block">About Us</a>
+                                    <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[1px] bg-white group-hover:w-full"></span>
+                                </li>
+                                <li class="group relative w-max">
+                                    <a href="service.html" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-4 block">Services</a>
+                                    <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[1px] bg-white group-hover:w-full"></span>
+                                </li>
+                                <li class="group relative w-max">
+                                    <a href="works.html" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-4 block">Works</a>
+                                    <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[1px] bg-white group-hover:w-full"></span>
+                                </li>
+                                <li class="group relative w-max">
+                                    <a href="contact.html" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-4 block">Contact Us</a>
+                                    <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[1px] bg-white group-hover:w-full"></span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="">
+                            <span class="font-InterTight font-normal text-sm leading-6 text-white text-opacity-70">Based on</span>
+                            <ul>
+                                <li class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-3 block">New York, USA</li>
+                                <li class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-3">Dubai, UAE</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <span class="font-InterTight font-normal text-sm leading-6 text-white text-opacity-70">Follow us</span>
+                            <ul>
+                                <li><a href="#" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-3 block">LinkedIn</a></li>
+                                <li><a href="#" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-3 block">Twitter</a></li>
+                                <li><a href="#" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-3 block">Behance</a></li>
+                                <li><a href="#" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-3 block">Dribbble</a></li>
+                            </ul>
+                        </div>
+
+                       <div class="">
+                            <span class="font-InterTight font-normal text-sm leading-6 text-white text-opacity-70">Based on</span>
+                            <ul>
+                                <li class="group relative w-max">
+                                    <a href="terms.html" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-3 block">Terms & Conditions</a>
+                                    <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[1px] bg-white group-hover:w-full"></span>
+                                </li>
+                                <li class="group relative w-max">
+                                    <a href="policy.html" class="font-InterTight font-normal text-xl leading-7 text-[#EDECE4] pt-4 block">Privacy Policy</a>
+                                    <span class="absolute -bottom-1 left-0 w-0 transition-all duration-500 h-[1px] bg-white group-hover:w-full"></span>
+                                </li>
+                            </ul>
+                       </div>
+                    </div>
+                </div>
+                <hr class="border border-white border-opacity-30 my-8"/>
+
+                <div class="flex md:flex-row flex-col justify-between items-start xl:gap-0 gap-2">
+                    <p class="font-InterTight font-normal text-base leading-7 text-white text-opacity-70">&copy; 2025 Company All rights reserved.</p>
+                    <a href="#" class="font-InterTight font-normal text-base leading-7 text-white text-opacity-70">Design @Figma</a>
+                </div>
+            </div>
+             <img
+                data-aos="zoom-in"
+                data-aos-duration="1000"
+                data-aos-offset="20"
+                data-aos-once="true"
+             class="w-full" src="assets/img/footer-logo.svg" alt="">
+        </div>
+       
+    </section>
+    <!-- Footer Area End Here -->
+
+    <script src="assets/js/alpine.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/aos_script.js"></script>
+</body>
+</html>
